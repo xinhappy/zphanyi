@@ -1,7 +1,7 @@
 <style>
     .spanSpan {
         border: 1px solid #d1d1d1;
-        padding-right: 2vw;
+        padding-right: 1vw;
         padding-left: 2vw;
     }
     
@@ -15,15 +15,16 @@
     <div class="logo">
         <img src="images/report_logo.png" alt="">
     </div>
-    <div class="info"><span>体检日期: </span>
+    <p class="info" style="float: left"><span>姓名: </span><span> {{selectData[0].personName}}</span></p>
+    <!--<p class="info"><span>年龄: </span><span> {{selectData[0].age}}</span></p>-->
+    <div class="info" style="float: right;width: 51%"><span>体检日期: </span>
         <span class="spanSpan"><span class="selectHealthDateSpan">{{selectData[0].checkTime}}</span><img class="selectHealthDateSpanimg"
             src="images/downtime.png" alt=""></span>
         <div class="selectHealthDate">
             <div checknum={{item.checkNum}} query-Report ng-repeat="item in selectData">{{item.checkTime}}</div>
         </div>
     </div>
-    <p class="info"><span>姓名: </span><span> {{selectData[0].personName}}</span></p>
-    <p class="info"><span>年龄: </span><span> {{selectData[0].age}}</span></p>
+    <div style="clear: both"></div>
     <div ng-if="newselectDataOne == undefined" class="content">
         <img class="manOutline" src="images/manOutline.png" alt="">
         <div class="heightLine">
@@ -49,7 +50,7 @@
             <div class="dataWrap">
                 <span class="redBlock"></span>
                 <div class="dataWrapDiv">
-                    <p>{{selectDataOne.rows[1].programResult}}{{selectDataOne.rows[1].util}}/{{selectDataOne.rows[2].programResult}}{{selectDataOne.rows[2].util}}</p>
+                    <p>{{selectDataOne.rows[1].programResult}}/{{selectDataOne.rows[2].programResult}}{{selectDataOne.rows[2].util}}</p>
                     <p>{{selectDataOne.rows[1].programName}}/{{selectDataOne.rows[2].programName}}</p>
                 </div>
             </div>
@@ -72,6 +73,13 @@
                 <div class="dataWrapDiv">
                     <p>{{selectDataOne.rows[5].programResult}}{{selectDataOne.rows[5].util}}</p>
                     <p>{{selectDataOne.rows[5].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{selectDataOne.rows[6].programResult}}{{selectDataOne.rows[5].util}}</p>
+                    <p>{{selectDataOne.rows[6].programName}}</p>
                 </div>
             </div>
         </div>
@@ -107,7 +115,7 @@
             <div class="dataWrap">
                 <span class="redBlock"></span>
                 <div class="dataWrapDiv">
-                    <p>{{newselectDataOne.rows[1].programResult}}{{newselectDataOne.rows[1].util}}/{{newselectDataOne.rows[2].programResult}}{{newselectDataOne.rows[2].util}}</p>
+                    <p>{{newselectDataOne.rows[1].programResult}}/{{newselectDataOne.rows[2].programResult}}{{newselectDataOne.rows[2].util}}</p>
                     <p>{{newselectDataOne.rows[1].programName}}/{{newselectDataOne.rows[2].programName}}</p>
                 </div>
             </div>
@@ -130,6 +138,13 @@
                 <div class="dataWrapDiv">
                     <p>{{newselectDataOne.rows[5].programResult}}{{newselectDataOne.rows[5].util}}</p>
                     <p>{{newselectDataOne.rows[5].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{newselectDataOne.rows[6].programResult}}{{newselectDataOne.rows[5].util}}</p>
+                    <p>{{newselectDataOne.rows[6].programName}}</p>
                 </div>
             </div>
         </div>

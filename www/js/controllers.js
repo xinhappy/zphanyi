@@ -7406,7 +7406,6 @@ routeApp.controller('imgDetailCtrl', function ($scope, $state, $rootScope, $http
             })
         }
     })
-
     $scope.imgAll=myService.getObject('imgRepData');
     for(var i=$scope.imgAll.length-1;i>=0;i--){
         if($scope.imgAll[i].imgList.length===0){

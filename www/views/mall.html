@@ -1,0 +1,67 @@
+<div class="mallHeader">
+    <a href="" class="menu"><img src="images/menu.png" alt=""></a>
+    韩一商城
+    <a href="#/cart" class="cart"><img src="images/cart.png" alt=""></a>
+</div>
+<div class="productsWrap">
+    <a ui-sref="productsDetail({id:item.id})" ng-repeat="item in rows" href="#/productsDetail" class="products">
+        <div class="left">
+            <img ng-src="{{imgIp+item.coverUrl}}" alt="">
+        </div>
+        <div class="right">
+            <p ng-bind="item.goodsName"></p>
+            <div class="rowWrap">
+                <div class="twoRow">
+                    <!--<span>￥:</span><span>男</span><span style="text-decoration: line-through;" ng-bind="item.manPrice"></span>-->
+                    <span class="nanMedia" style="display: inline-block;color: #000;">男<span style="color: #fff">男</span>性</span><span style="color: #d9d9d9;text-decoration: line-through;margin-left: 10vw;"
+                        ng-bind="item.manPrice"></span><span style="margin-left: 10vw; font-size: 4.5vw;color: #f03339;">{{item.manDiscountPrice}}</span>
+                    <!--<div class="stockWrap">
+                    <span>剩余：</span><span ng-bind="item.stockNum"></span>
+                </div>-->
+                </div>
+                <div class="threeRow">
+                    <span style="color: #000;">女</span><span style="color: #000;">未婚</span><span style="color: #d9d9d9;text-decoration: line-through;margin-left: 10vw;"
+                        ng-bind="item.womanPriceNot"></span><span style="margin-left: 10vw;font-size: 4.5vw;color: #f03339;">{{item.womanDiscountPriceNot}}</span>
+                </div>
+                <div class="threeRow">
+                    <span style="color: #000;">女</span><span style="color: #000;">已婚</span><span style="color: #d9d9d9;text-decoration: line-through;margin-left: 10vw;"
+                        ng-bind="item.womanPriceYet"></span><span style="margin-left: 10vw;font-size: 4.5vw;color: #f03339;">{{item.womanDiscountPriceYet}}</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!--<a href="#/productsDetail" class="products">
+        <div class="left">
+            <img src="images/BZZHJC.jpg" alt="">
+        </div>
+        <div class="right">
+            <p>标准综合检查套餐标准综合检查套餐标准综合检查套餐标准综合检查套餐</p>
+            <div class="rowWrap">
+                <div class="twoRow">
+                    <span>￥:</span><span>男</span><span>2200</span>
+                    <div class="stockWrap">
+                        <span>剩余：</span><span>1</span>
+                    </div>
+                </div>
+                <div class="threeRow">
+                    <span>女</span><span>未婚</span><span>2300</span><span>/</span><span>女</span><span>已婚</span><span>250990</span>
+                </div>
+            </div>
+        </div>
+    </a>-->
+</div>
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

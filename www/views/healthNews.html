@@ -1,0 +1,134 @@
+<style>
+    .swiper-container {
+        width: 100%;
+        margin: 14vw auto 0 auto;
+    }
+    
+    .swiper-slide {
+        height: 60vw;
+        width: 33% !important;
+        border-radius: 5px;
+        padding: 1px;
+    }
+    
+    .swiper-slide div {
+        /*border: 1px solid red;*/
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .6);
+        background-color: #ffffff;
+        position: relative;
+        height: 59vw;
+        border-radius: 5px;
+    }
+    
+    .swiper-slide img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 100%;
+    }
+    
+    .swiper-slide .articleTittle {
+        font-weight: normal;
+        font-size: 12px;
+        text-align: center;
+        padding: 0 5px 0 5px;
+        color: #171717;
+    }
+    
+    .swiper-slide .chiefName {
+        font-size: 3.5vw;
+        position: absolute;
+        bottom: 0;
+        right: 5px;
+        font-weight: normal;
+        color: #C2C2C2;
+        text-align: center;
+    }
+</style>
+<div class="newsWrap">
+    <h1 class="h1Title" ng-bind="articleTitleHealth"></h1>
+    <p class="dec">每一天都给您最温暖的呵护</p>
+    <div class="timeWrap">
+        <div ng-bind="curDate" class="left"></div>
+        <div class="right">
+            <span class="latest">最新</span>
+            <span class="clarify">分类</span>
+            <div class="selectContent">
+                <div on-Finish-Caselist="caselistFinished" programCode="{{item.programCode}}" articleTittle="{{item.programName}}" ng-repeat="item in caseList" ng-bind="item.programName">每日衣尚</div>
+            </div>
+        </div>
+    </div>
+    <div class="clearBoth"></div>
+
+    <div class="swiper-container healthNewsSwiper-container">
+        <div class="swiper-wrapper">
+            <a ui-sref="healthNewsDetail({id:item.articleId})" on-Finish-Zixun="zixunFinished" ng-repeat="item in selectRows" style="margin-left: 20px;" class="swiper-slide">
+                <div>
+                    <img ng-src="{{imgIp+item.background}}" alt="">
+                    <h3 class="articleTittle" ng-bind="item.articleTittle"></h3>
+                    <p class="chiefName mall-font smallsize-font"  ng-bind="item.chiefName"></p>
+                </div>
+            </a>
+            <!--<div style="margin-left: 20px;" class="swiper-slide">
+                <div>
+                    <img src="images/4cd341569e94406a919b178c8b768958.jpg" alt="">
+                    <h3 class="articleTittle">成功逆袭的“高领毛衣”</h3>
+                    <p class="chiefName mall-font smallsize-font">每日衣尚</p>
+                </div>
+            </div>
+            <div style="margin-left: 20px;" class="swiper-slide">
+                <div>
+                    <img src="images/4cd341569e94406a919b178c8b768958.jpg" alt="">
+                    <h3 class="articleTittle">成功逆袭的“高领毛衣”</h3>
+                    <p class="chiefName mall-font smallsize-font">每日衣尚</p>
+                </div>
+            </div>
+            <div style="margin-left: 20px;" class="swiper-slide">
+                <div>
+                    <img src="images/4cd341569e94406a919b178c8b768958.jpg" alt="">
+                    <h3 class="articleTittle">成功逆袭的“高领毛衣”</h3>
+                    <p class="chiefName mall-font smallsize-font">每日衣尚</p>
+                </div>
+            </div>
+            <div style="margin-left: 20px;" class="swiper-slide">
+                <div>
+                    <img src="images/4cd341569e94406a919b178c8b768958.jpg" alt="">
+                    <h3 class="articleTittle">成功逆袭的“高领毛衣”</h3>
+                    <p class="chiefName mall-font smallsize-font">每日衣尚</p>
+                </div>
+            </div>
+            <div style="margin-left: 20px;" class="swiper-slide">
+                <div>
+                    <img src="images/4cd341569e94406a919b178c8b768958.jpg" alt="">
+                    <h3 class="articleTittle">成功逆袭的“高领毛衣”</h3>
+                    <p class="chiefName mall-font smallsize-font">每日衣尚</p>
+                </div>
+            </div>
+            <div style="margin-left: 20px;" class="swiper-slide">
+                <div>
+                    <img src="images/4cd341569e94406a919b178c8b768958.jpg" alt="">
+                    <h3 class="articleTittle">成功逆袭的“高领毛衣”</h3>
+                    <p class="chiefName mall-font smallsize-font">每日衣尚</p>
+                </div>
+            </div>-->
+
+        </div>
+        <div class="clearBoth"></div>
+    </div>
+    <div class="bottomBlank"></div>
+    <div class="footerNav">
+
+        <a ng-click="goback()" class="backIcon">
+
+        </a>
+        <a href="#/home" class="homeIcon">
+
+        </a>
+        <a id="easemob" class="userIcon">
+
+        </a>
+    </div>
+    <div class="clearBoth"></div>
+
+    <!--<script>
+        console.log($('.timeWrap .right .selectContent').css('height'))
+    </script>-->

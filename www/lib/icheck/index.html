@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Checkboxes and radio buttons customization (jQuery and Zepto) plugin</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <!--<link href="css/custom.css?v=1.0.2" rel="stylesheet">-->
+  <link href="skins/all.css?v=1.0.2" rel="stylesheet">
+  <script src="js/jquery.js"></script>
+  <script src="js/icheck.js?v=1.0.2"></script>
+  <!--<script src="js/custom.min.js?v=1.0.2"></script>-->
+</head>
+
+<body>
+  <input tabindex="13" type="checkbox" id="flat-checkbox-1">
+  <label for="flat-checkbox-1">Checkbox 1</label>
+  <script>
+    $(document).ready(function () {
+      $('#flat-checkbox-1').iCheck({
+        checkboxClass: 'icheckbox_flat-blue',
+      });
+    });
+  </script>
+
+</body>
+
+</html>

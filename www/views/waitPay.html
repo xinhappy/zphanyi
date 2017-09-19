@@ -1,0 +1,47 @@
+<style>
+    body {
+        background-color: #F7F7F9;
+    }
+</style>
+<div class="mallHeader">
+    待付款
+</div>
+
+<div class="waitPay">
+    <a ng-click="orderDetail()" href="#/orderDetail" ng-repeat="item in waitPay" class="waitOrder">
+        <!--<a href="#/home" class="waitOrder">-->
+        <div class="imgWrap">
+            <!--<img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">-->
+            <img ng-repeat="imgI in item.goodsVoList as allImg" ng-src="{{imgIp+imgI.coverUrl}}" alt="">
+            <span ng-if="allImg.length<2"
+                class="orderFirstName"> {{item.goodsVoList[0].goodsName}}</span>
+        </div>
+        <p class="pContent">共<span>{{item.goodsNum}}</span>件商品 需付款: <span>{{item.orderAmount | currency: "￥"}}</span></p>
+        <span class="waitPayA" href="">去支付</span>
+    </a>
+
+</div>
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

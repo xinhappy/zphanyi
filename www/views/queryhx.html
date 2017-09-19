@@ -1,0 +1,96 @@
+<style>
+    .input-group{
+        /*border: 1px solid red;*/
+        position: fixed;
+        background-color: #ffffff;
+        bottom: 15vw;
+    }
+    .input-group input{
+        width: 72vw;
+        border: 1px solid #adadad;
+        height: 8vw;
+        border-radius: 3px;
+    }
+    .hxBtn{
+        height: 9vw !important;
+        width: 20vw !important;
+        background-color: #8A75FF;
+        color: #ffffff;
+    }
+    li{
+        list-style: none;
+        width: 45vw;
+        float: right;
+        margin-right: 2vw;
+    }
+    .kuangkuang{
+        border: 1px solid #adadad;
+        font-size: 4vw;
+        padding: 3px;
+        border-radius: 3px;
+    }
+</style>
+<div style="background-color: #ffffff;" class="mallHeader mallHeaderStatic">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>在线咨询</span>
+</div>
+<div class="container clear-top">
+    <div class="row" style="padding-top: 20px;padding-bottom: 20px">
+        <div class="col-md-12">
+            <ul class="media-list" style="flex-wrap: wrap-reverse">
+                <li class="media" ng-repeat="chat in chatlist">
+                    <div class="media-body">
+                        <div class="media">
+                            <div ng-if="!chat.self" class="text-left">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object img-circle" />
+                                </a>
+                                <div class="media-body kuangkuang">
+                                    {{chat.data}}
+                                    <br/>
+                                </div>
+                            </div>
+
+                            <div ng-if="chat.self" class="text-right">
+                                <div class="media-body kuangkuang">
+                                    {{chat.data}}
+                                    <br/>
+                                </div>
+                                <a class="pull-left" href="#">
+                                    <img class="media-object img-circle" ng-src="{{img}}" alt="{{placeholder}}" />
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="navbar navbar-default navbar-fixed-bottom" style="padding: 5px">
+
+        <form class="input-group" ng-submit="sendmsg()">
+            <input type="text" class="form-control" ng-model="msg" />
+            <span class="input-group-btn">
+             <input class="hxBtn" type="submit" value="发送">
+            </span>
+        </form>
+    </div>
+</div>
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

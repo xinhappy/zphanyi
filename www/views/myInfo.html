@@ -1,0 +1,67 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+</style>
+<div class="mallHeader mallHeaderStatic">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>个人信息</span>
+</div>
+
+
+<a href="#/editPortrait" class="accountAdress accountWrap myInfo myInfoPortrait">
+    <span class="">头像</span>
+    <div class="accountRight">
+        <span ng-if="accountData.userPhotoUrl != '/uploadFilenull'"><img class="portrait" ng-src="{{imgIp+accountData.userPhotoUrl}}" alt=""></span>
+        <span ng-if="accountData.userPhotoUrl == '/uploadFilenull'"><img class="portrait"  src="images/defaultPortrait.jpg"  alt=""></span>
+        <img class="rightPng" src="images/right.png" alt="">
+    </div>
+</a>
+<a class="accountAdress accountWrap myInfo">
+    <span class="">账号</span>
+    <div class="accountRight">
+        <span style="padding-right: 3vw;" ng-bind="accountData.telephone"></span>
+    </div>
+</a>
+<a href="#/modifyNickname" class="accountAdress accountWrap myInfo">
+    <span class="">昵称</span>
+    <div class="accountRight">
+        <span ng-bind="accountData.nickname"></span>
+        <img src="images/right.png" alt="">
+    </div>
+</a>
+<a href="#/modifyUserSex" class="accountAdress accountWrap myInfo">
+    <span class="">性别</span>
+    <div class="accountRight">
+        <span ng-if="accountData.userSex == '2'">男</span>
+        <span ng-if="accountData.userSex == '1'">女</span>
+        <span ng-if="accountData.userSex == '0'">保密</span>
+        <span ng-if="accountData.userSex == null">点击选择</span>
+        <img src="images/right.png" alt="">
+    </div>
+</a>
+<a href="#/modifyUserBirthday" class="accountAdress accountWrap myInfo">
+    <span class="">出生日期</span>
+    <div class="accountRight">
+        <span ng-if="subDate != null" ng-bind="subDate"></span>
+        <span ng-if="subDate == null">点击选择</span>
+        <img src="images/right.png" alt="">
+    </div>
+</a>
+
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a href="#/account" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

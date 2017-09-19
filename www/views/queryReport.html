@@ -1,0 +1,166 @@
+<style>
+    .spanSpan {
+        border: 1px solid #d1d1d1;
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+    
+    .selectHealthDateSpanimg {
+        width: 5vw;
+        margin-left: 2vw;
+    }
+</style>
+<div class="allMask"></div>
+<div class="queryReport">
+    <div class="logo">
+        <img src="images/report_logo.png" alt="">
+    </div>
+    <div class="info"><span>体检日期: </span>
+        <span class="spanSpan"><span class="selectHealthDateSpan">{{selectData[0].checkTime}}</span><img class="selectHealthDateSpanimg"
+            src="images/downtime.png" alt=""></span>
+        <div class="selectHealthDate">
+            <div checknum={{item.checkNum}} query-Report ng-repeat="item in selectData">{{item.checkTime}}</div>
+        </div>
+    </div>
+    <p class="info"><span>姓名: </span><span> {{selectData[0].personName}}</span></p>
+    <p class="info"><span>年龄: </span><span> {{selectData[0].age}}</span></p>
+    <div ng-if="newselectDataOne == undefined" class="content">
+        <img class="manOutline" src="images/manOutline.png" alt="">
+        <div class="heightLine">
+            <img class="heightTop" src="images/heightTop.png" alt="">
+            <p class="heightNum"><span>{{selectDataOne.object[0].programResult}}</span><span>cm</span></p>
+            <img class="heightBottom" src="images/heightBottom.png" alt="">
+        </div>
+        <div class="rightData">
+            <!--<div ng-repeat="item2 in selectDataOne.rows" class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{item2.programResult}}{{item2.util}}</p>
+                    <p>{{item2.programName}}</p>
+                </div>
+            </div>-->
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{selectDataOne.rows[0].programResult}}{{selectDataOne.rows[0].util}}</p>
+                    <p>{{selectDataOne.rows[0].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{selectDataOne.rows[1].programResult}}{{selectDataOne.rows[1].util}}/{{selectDataOne.rows[2].programResult}}{{selectDataOne.rows[2].util}}</p>
+                    <p>{{selectDataOne.rows[1].programName}}/{{selectDataOne.rows[2].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{selectDataOne.rows[3].programResult}}{{selectDataOne.rows[3].util}}</p>
+                    <p>{{selectDataOne.rows[3].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{selectDataOne.rows[4].programResult}}{{selectDataOne.rows[4].util}}</p>
+                    <p>{{selectDataOne.rows[4].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{selectDataOne.rows[5].programResult}}{{selectDataOne.rows[5].util}}</p>
+                    <p>{{selectDataOne.rows[5].programName}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="clearBoth"></div>
+        <div class="weightDiv">
+            <img src="images/weightWhite.png" alt="">
+            <p><span>{{selectDataOne.object[1].programResult}}</span><span>kg</span></p>
+        </div>
+        <!--<div class="bottomDate">2017/02/14</div>-->
+    </div>
+    <div ng-if="newselectDataOne != undefined" class="content">
+        <img class="manOutline" src="images/manOutline.png" alt="">
+        <div class="heightLine">
+            <img class="heightTop" src="images/heightTop.png" alt="">
+            <p class="heightNum"><span>{{newselectDataOne.object[0].programResult}}</span><span>cm</span></p>
+            <img class="heightBottom" src="images/heightBottom.png" alt="">
+        </div>
+        <div class="rightData">
+            <!--<div ng-repeat="item2 in newselectDataOne.rows" class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{item2.programResult}}{{item2.util}}</p>
+                    <p>{{item2.programName}}</p>
+                </div>
+            </div>-->
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{newselectDataOne.rows[0].programResult}}{{newselectDataOne.rows[0].util}}</p>
+                    <p>{{newselectDataOne.rows[0].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{newselectDataOne.rows[1].programResult}}{{newselectDataOne.rows[1].util}}/{{newselectDataOne.rows[2].programResult}}{{newselectDataOne.rows[2].util}}</p>
+                    <p>{{newselectDataOne.rows[1].programName}}/{{newselectDataOne.rows[2].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{newselectDataOne.rows[3].programResult}}{{newselectDataOne.rows[3].util}}</p>
+                    <p>{{newselectDataOne.rows[3].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{newselectDataOne.rows[4].programResult}}{{newselectDataOne.rows[4].util}}</p>
+                    <p>{{newselectDataOne.rows[4].programName}}</p>
+                </div>
+            </div>
+            <div class="dataWrap">
+                <span class="redBlock"></span>
+                <div class="dataWrapDiv">
+                    <p>{{newselectDataOne.rows[5].programResult}}{{newselectDataOne.rows[5].util}}</p>
+                    <p>{{newselectDataOne.rows[5].programName}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="clearBoth"></div>
+        <div class="weightDiv">
+            <img src="images/weightWhite.png" alt="">
+            <p><span>{{newselectDataOne.object[1].programResult}}</span><span>kg</span></p>
+        </div>
+        <!--<div class="bottomDate">2017/02/14</div>-->
+    </div>
+    <div class="btnDiv">
+        <a href="#/totalSug" class="totalSug">综述及建议</a>
+        <a href="#/healthRep" class="healthRep">体检报告</a>
+        <a href="#/imgRep" class="imgRep">图片报告</a>
+    </div>
+</div>
+
+
+<div class="bottomBlank">
+
+</div>
+<div class="footerNav">
+
+    <a href="#/userInfo" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

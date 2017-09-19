@@ -1,0 +1,55 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+    
+    .red {
+        border: 1px solid #CD1319 !important;
+        color: #CD1319 !important;
+    }
+    
+    .black {
+        border: 1px solid #333;
+        color: #333;
+    }
+</style>
+<div class="mallHeader mallHeaderStatic">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>选择配送支付方式</span>
+</div>
+<div class="payDelivery">
+    <div class="payWay">
+        <p class="payImg"><img src="images/payWay.png" alt=""><span>支付方式</span></p>
+        <span class="payBtn">支付宝支付</span>
+    </div>
+    <!--<div class="payWay deliveryWay">
+        <p class="payImg"><img src="images/deliveryWay.png" alt=""><span>配送方式</span></p>
+        <span ng-class="{true :'red'}[item.check]" delivery-Way ng-click="selectDeliveryWay($event,value)" ng-repeat="item in deliveryMethod"
+            class="payBtn" ng-bind="item.methodName"></span>
+    </div>-->
+</div>
+
+<a href="#/editOrder"><input class="payDeliveryBtn" type="button" value="确定"></a>
+
+
+
+
+
+
+
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

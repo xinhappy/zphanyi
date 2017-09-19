@@ -1,0 +1,14 @@
+<style>
+    .report_list{
+        color: #888;
+    }
+</style>
+<div>
+    <ul>
+        <li ng-repeat="item in data" style="margin-bottom: 2vw">
+            <a class="report_list" ui-sref="reportDetail({id:item.id})">
+                <div ng-bind="item.title"></div>
+            </a>
+        </li>
+    </ul>
+</div>

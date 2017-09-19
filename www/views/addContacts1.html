@@ -1,0 +1,124 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+    
+    #HCloseBtn span {
+        height: 35px !important;
+        line-height: 35px !important;
+        font-size: 15px !important;
+    }
+</style>
+<div class="mallHeader editInfoHeader">
+    <a ng-click="goback()" class="menu"><img src="images/nav_back_black@3x.png" alt=""></a>
+    <span>新增联系人</span>
+    <a ng-click="saveContacts()" class="editSelect" style="color: #333;margin-left: 27vw;" href="">保存</a>
+</div>
+<div class="editInfo">
+    <form>
+        <div class="editGray">
+            基本信息
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">姓名</span><input id="personName" name="personName" type="text" placeholder="输入姓名">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">手机号</span><input id="telephone" name="telephone" type="text" placeholder="输入手机号">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">身份证号</span><input id="userCard" name="userCard" type="text" placeholder="如含有x(x为小写)">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">婚姻状况</span>
+            <input name="maritalStatus" id="yiweiInput" value="已婚" readonly type="text">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">性别</span>
+            <input name="userSex" id="sexInput" value="男" readonly type="text">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">年龄</span><input id="tijianAge" name="age" type="text" placeholder="输入年龄">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">身高</span>
+            <input id="tijianHeight" name="height" type="text" type="text" placeholder="输入身高(cm)">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">体重</span><input id="tijianWeight" name="weight" type="text" placeholder="输入体重(kg)">
+        </div>
+
+        <!--<div id="timeSelect">
+        <h3>请选择</h3>
+        <div class="manPriceDiv" cardType="0">
+            <p class="selectWrap HCloseBtn">
+                07:30
+            </p>
+        </div>
+        <div cardType="1" class="nvweiPriceDiv">
+            <p class="selectWrap HCloseBtn">
+                08:00
+            </p>
+        </div>
+        <div class="" cardType="2">
+            <p class="selectWrap HCloseBtn">
+                08:30
+            </p>
+        </div>
+        <div class="" cardType="2">
+            <p class="selectWrap HCloseBtn">
+                09:00
+            </p>
+        </div>
+        <div class="nvyi nvyiPriceDiv" cardType="2">
+            <p class="selectWrap HCloseBtn">
+                09:30
+            </p>
+        </div>
+    </div>-->
+
+
+</div>
+</form>
+<div id="sexSelect">
+    <h3>请选择</h3>
+    <div userSex="2" class="manPriceDiv" cardType="0">
+        男
+    </div>
+    <div userSex="1" class="nvyi nvyiPriceDiv" cardType="2">
+        女
+    </div>
+</div>
+<div id="yiweiSelect">
+    <h3>请选择</h3>
+    <div maritalStatus="2" class="manPriceDiv" cardType="0">
+        已婚
+    </div>
+    <div maritalStatus="1" class="nvyi nvyiPriceDiv" cardType="2">
+        未婚
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

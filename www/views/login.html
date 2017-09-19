@@ -1,0 +1,28 @@
+<style>
+    body {
+        background: url(/images/login_bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+</style>
+<div class="mallHeader loginHeader mallHeaderStatic">
+    <a href="#/home" class="menu"><img src="images/nav_back_black@3x.png" alt=""></a>
+    <span>登录</span>
+</div>
+<div class="login_logo">
+    <img src="images/login_logo.png" alt="">
+</div>
+<form class="loginForm" ng-submit="sub()">
+    <div class="loginInput">
+        <img src="images/login_acc.png" alt="">
+        <input id="login_telephone" name="telephone" ng-model="usrData.telephone" type="text" placeholder="账号">
+    </div>
+    <div class="loginInput">
+        <img src="images/login_pass.png" alt=""><input name="password" ng-model="usrData.password" type="password" placeholder="密码">
+    </div>
+    <div class="twoFun">
+        <a href="#/regist">注册账号</a>
+        <a href="#/forget">忘记密码?</a>
+    </div>
+    <input autoComplete="off" class="loginSubmit" type="submit" value="会员登录">
+</form>

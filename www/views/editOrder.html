@@ -1,0 +1,78 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+</style>
+<div class="mallHeader">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>填写订单</span>
+</div>
+<div class="editOrder">
+    <!--<a ng-if="checkedAddressData.id == undefined" href="#/selectAddress" class="orderInfo">
+        <p class="namePhone"><span class="nickname" ng-bind="orderAddressData.rows[0].consignee"></span>
+            <span ng-bind="orderAddressData.rows[0].mobilePhone" class="telephone"></span>
+            <img ng-if="orderAddressData.rows[0].isDefault == '1'" class="defaultFont" src="images/defaultFont.png" alt="">
+            <img class="rightIcon" class="right" src="images/right.png" alt=""></p>
+        <p class="addressDetail"><img class="gpspng" src="images/gpspng.png" alt=""><span>{{orderAddressData.rows[0].province+orderAddressData.rows[0].city+orderAddressData.rows[0].county}}</span>-<span>{{orderAddressData.rows[0].address}}</span></p>
+    </a>-->
+    <a ng-if="checkedAddressData.id != undefined" href="#/selectAddress" class="orderInfo">
+        <p class="namePhone"><span class="nickname" ng-bind="checkedAddressData.consignee"></span>
+            <span ng-bind="checkedAddressData.mobilePhone" class="telephone"></span>
+            <img ng-if="checkedAddressData.isDefault == '1'" class="defaultFont" src="images/defaultFont.png" alt="">
+            <img class="rightIcon" class="right" src="images/right.png" alt=""></p>
+        <p class="addressDetail"><img class="gpspng" src="images/gpspng.png" alt=""><span>{{checkedAddressData.province+checkedAddressData.city+checkedAddressData.county}}</span>-<span>{{checkedAddressData.address}}</span></p>
+    </a>
+
+    <div ng-repeat="item in checkData" class="orderMeal">
+        <img class="mealImg" ng-src="{{imgIp+item.coverUrl}}" alt="">
+        <div class="mealContent">
+            <p class="mealname" ng-bind="item.goodsName"></p>
+            <span class="mealPrice" ng-bind="item.goodsPrice"></span>
+            <p class="mealType"><span>体检卡类型:</span><span ng-bind="item.cardType"></span></p>
+        </div>
+        <div class="mealNum"><span>数量:</span> <span ng-bind="item.goodsNum"></span></div>
+    </div>
+
+    <a style="color: #333;" href="#/deliveryWay" class="orderDeliver">
+        <span class="peisong">支付方式</span>
+        <div class="zhifuDiv">
+            <span>支付宝支付</span>
+            <!--<span class="deliverType" ng-bind="deliveryMethod"></span>-->
+        </div>
+        <img class="rightIcon" class="right" src="images/right.png" alt="">
+        <!--<span class="remark" ng-if="checkDeliveryWay.remark != undefined" ng-bind="checkDeliveryWay.remark"></span>
+        <span class="remark" ng-if="defaultDelivery.remark != undefined" ng-bind="defaultDelivery.remark"></span>-->
+    </a>
+
+
+    <div class="purchase confirmOrder">
+        <div class="summaryWrap"><span>合计:</span><span class="money">&nbsp;</span><span class="allMoney">￥{{sumTotal}}</span>
+            <a id="confirmOrder" ng-click="confirmOrder()" class="goPurchase">确认订单</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

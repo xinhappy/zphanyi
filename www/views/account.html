@@ -1,0 +1,59 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+</style>
+<div class="mallHeader mallHeaderStatic">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>账户管理</span>
+</div>
+
+<a href="#/myInfo" class="accountHead accountWrap">
+    <div class="portrait">
+        <img ng-if="accountData.userPhotoUrl != '/uploadFilenull'" ng-src="{{imgIp+accountData.userPhotoUrl}}" alt="">
+        <img ng-if="accountData.userPhotoUrl == '/uploadFilenull'" src="images/defaultPortrait.jpg" alt="">
+    </div>
+    <div class="nickName">
+        <span ng-bind="accountData.nickname"></span> <br>
+        <span class="userColor">用户名：</span><span ng-bind="accountData.telephone" class="userColor"></span>
+    </div>
+    <img class="right" src="images/right.png" alt="">
+</a>
+
+<a href="#/addressControl" class="accountAdress accountWrap">
+    <span class="">地址管理</span>
+    <div class="accountRight">
+        <span>地址管理</span>
+        <img src="images/right.png" alt="">
+    </div>
+</a>
+<a href="#/idVerify" class="accountWrap accountRealName">
+    <span class="">实名认证</span>
+    <div class="accountRight">
+        <span>实名认证</span>
+        <img src="images/right.png" alt="">
+    </div>
+</a>
+<a href="#/accountSafety" class="accountWrap">
+    <span class="">账户安全</span>
+    <div class="accountRight">
+        <span>账户安全</span>
+        <img src="images/right.png" alt="">
+    </div>
+</a>
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a href="#/userInfo" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

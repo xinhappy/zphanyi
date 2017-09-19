@@ -1,0 +1,30 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+</style>
+<div class="mallHeader mallHeaderStatic">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>支付</span>
+</div>
+
+<div class="goPayTotal">
+    订单总价： <span class="money">{{orderDetailData.orderAmount | currency: "￥"}}</span>
+</div>
+
+<a id="zhifupay"><input class="zhifupay" type="submit" value="支付宝支付"></a>
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

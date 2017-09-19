@@ -1,0 +1,146 @@
+<style>
+    .mtree-demo .mtree {
+        background: #EEE;
+        margin: 20px auto;
+        border-radius: 3px;
+    }
+    
+    .mtree-skin-selector {
+        text-align: center;
+        background: #EEE;
+        padding: 10px 0 15px;
+    }
+    
+    .mtree-skin-selector li {
+        display: inline-block;
+        float: none;
+    }
+    
+    .mtree-skin-selector button {
+        padding: 5px 10px;
+        margin-bottom: 1px;
+        background: #BBB;
+    }
+    
+    .mtree-skin-selector button:hover {
+        background: #999;
+    }
+    
+    .mtree-skin-selector button.active {
+        background: #999;
+        font-weight: bold;
+    }
+    
+    .mtree-skin-selector button.csl.active {
+        /*background: #FFC000;*/
+    }
+    
+    ul.mtree-level-1 {
+        padding-left: 3vw;
+    }
+    
+    ul.mtree-level-2 {
+        padding-left: 3vw;
+    }
+    
+    .show {
+        display: block !important;
+    }
+    
+    .imgParent {
+        position: relative;
+    }
+    
+    .imgParent img {
+        position: absolute;
+        z-index: 99999;
+        right: 0vw;
+        top: 0.8vw;
+        width: 4vw;
+        margin: 0;
+    }
+</style>
+<div class="reportNav">
+    <div class="navCenter">
+        <a href="#/totalSug" class="totalSug">综述及建议</a>
+        <a href="#/healthRep" class="healthRep" style="background-color: #6B5ACD; color: #ffffff;">体检报告</a>
+        <a href="#/imgRep" class="imgRep">图片报告</a>
+    </div>
+</div>
+
+<ul class="mtree transit">
+    <li address-Control ng-repeat="item in healthData">
+        <a><img class="level1Png" src="images/level1.png" alt="">{{item.name}}</a>
+        <ul>
+            <li ng-click="getLevel3()" ng-repeat="item2 in item.list">
+                <a><img class="level2Png" src="images/level2.png" alt="">{{item2.name}}</a>
+                <ul ng-class="{true :'show'}[item2.check]" style="height: 100%;display: none;padding-left: 3vw;">
+                    <li class="level3Li">
+                        <a>
+                            <table class="reportTable">
+                                <tr ng-if="level3Data.length == 0">
+                                    <td style="width: 100vw;">暂无数据</td>
+                                </tr>
+                                <tr ng-if="level3Data.length > 0&& item.code!='CCJC'" style="border-bottom: 1px solid #ffffff;">
+                                    <td style="width: 40vw;">项目名称</td>
+                                    <td>检查结果</td>
+                                    <td style="width: 21vw;" class="imgParent">参考值</td>
+                                </tr>
+                                <tr ng-if="level3Data.length > 0 && item.code!='CCJC'" healthRep ng-repeat="item3 in level3Data">
+                                    <td>{{item3.programName}}{{item3.util}}</td>
+                                    <td>{{item3.programResult}}</td>
+                                    <td>{{item3.reference}}</td>
+                                </tr>
+                            </table>
+                            <div ng-if="level3Data.length > 0 && item.code=='CCJC'" >
+                                <div style="margin-bottom: 12px;font-weight:600;color: red;">检查结果：</div><div>{{level3Data[0].programResult}}</div>
+                            </div>
+                            <div id="healthSummary" ng-if="level3Data.length != 0" style="font-size: 3.8vw;">
+                                <div style="font-weight:600;margin-top: 10px;color: red;">小结</div><span ng-bind-html="newSummary"></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bottomBlank">
+
+</div>
+<div class="footerNav">
+
+    <a href="#/queryReport" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>
+<!--<script src="lib/mtree/mtree.js"></script>-->

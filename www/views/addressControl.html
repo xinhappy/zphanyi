@@ -1,0 +1,78 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .dialog-btn span {
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 3px;
+        margin: 0 15px;
+        cursor: pointer;
+    }
+</style>
+<div class="mallHeader">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>地址管理</span>
+</div>
+<div style="height: 10vw;"></div>
+<div address-Control ng-repeat="item in addressData.rows" class="addressDiv">
+    <div>
+        <p class="namePhone"><span class="nickname" ng-bind="item.consignee"></span><span ng-bind="item.mobilePhone"></span></p>
+        <p class="addressDetail"><span>{{item.province+item.city+item.county}}</span>-<span>{{item.address}}</span></p>
+        <p class="addressSelectWrap">
+            <span class="isDefaultSpan" ng-if="item.isDefault == '1'">
+                <img class="redCheckedClass" src="images/redChecked.png" alt="">
+                <label class="labelMargin">默认地址</label>
+            </span>
+            <span class="isDefaultSpan" ng-if="item.isDefault == '0'">
+                <img ng-click="setDefault()" class="redCheckedClass" src="images/notChecked.png" alt="">
+                <label class="labelMargin">设为默认</label>
+            </span>
+            <span class="editWrap">
+                <span ng-click="editAddress()" class="left"><img class="addresspng" src="images/edit.png" alt="">编辑</span>
+            <span ng-click="deleteAddress()" class="right"><img class="addresspng" src="images/delete.png" alt="">删除</span>
+            </span>
+        </p>
+    </div>
+</div>
+<div style="height: 18vw;"></div>
+
+
+
+
+
+<div class="addAddressDiv">
+    <a href="#/addAddress"><input ng-click="clearData()" class="addAddress" type="button" value="+新增收货地址"></a>
+</div>
+<div id="confirmLayer"></div>
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a href="#/account" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

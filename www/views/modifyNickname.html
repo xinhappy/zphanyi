@@ -1,0 +1,30 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+</style>
+<div class="mallHeader mallHeaderStatic">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>修改昵称</span>
+    <span ng-click="modifySave()" class="modifySave">保存</span>
+</div>
+
+<div class="modifyIdDiv">   
+    <input class="worthData" autofocus type="text" value="{{accountData.nickname}}">
+</div>
+<!--<span style="padding-left: 3vw;" class="small-font smallsize-font">4-20个字符，可由中英文，数字，‘_’，‘-’组成</span>-->
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

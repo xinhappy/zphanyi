@@ -1,0 +1,164 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+
+
+    #HCloseBtn span {
+        height: 35px !important;
+        line-height: 35px !important;
+        font-size: 15px !important;
+    }
+</style>
+<div class="mallHeader editInfoHeader">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>编辑体检人信息</span>
+
+</div>
+<div class="editInfo">
+    <div class="editGray">
+        套餐基本信息
+    </div>
+    <div class="taocanWrap">
+        <span class="yigouMeal">{{yigouMeal.cardName}}({{yigouMeal.cardNo}})</span>
+        <span class="yixuanMeal">{{yixuanMeal.name}}</span>
+    </div>
+    <form ng-submit="confirmAppoint()">
+        <div class="editGray">
+            体检人基本信息<a class="editSelect" href="#/membersControl1" style="float:right;color: #F03339;margin-right: 4vh;line-height: 10px"><img src="images/add_red.png" style="width: 15px;height: 15px;vertical-align: middle;margin-right: 5px;" alt="">添加成员</a>
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">姓名</span><input id="personName" name="personName" type="text" placeholder="输入姓名">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">手机号</span><input id="telephone" name="telephone" type="text" placeholder="输入手机号">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">身份证号</span><input id="userCard" name="userCard" type="text" placeholder="如含有x(x为小写)">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">婚姻状况</span>
+            <input name="maritalStatus" id="yiweiInput" value="已婚" readonly type="text">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">性别</span>
+            <input name="userSex" id="sexInput" value="男" readonly type="text">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">年龄</span><input id="tijianAge" name="age" type="text" placeholder="输入年龄">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">身高</span>
+            <input id="tijianHeight" name="height" type="text" type="text" placeholder="输入身高(cm)">
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">体重</span><input id="tijianWeight" name="weight" type="text" placeholder="输入体重(kg)">
+        </div>
+        <div class="editGray">
+            选择体检时间
+        </div>
+        <div class="inputWrap">
+            <span class="inputPrefix">选择日期</span>
+            <input input name="appointmentDate" id="tijianDate" type="text" placeholder="请点击选择">
+        </div>
+        <div class="inputWrap tijianTime">
+            <span class="inputPrefix">选择时间</span>
+            <input input name="appointmentTime" id="tijianTime" type="text" placeholder="请点击选择">
+        </div>
+        <!--<div id="timeSelect">
+        <h3>请选择</h3>
+        <div class="manPriceDiv" cardType="0">
+            <p class="selectWrap HCloseBtn">
+                07:30
+            </p>
+        </div>
+        <div cardType="1" class="nvweiPriceDiv">
+            <p class="selectWrap HCloseBtn">
+                08:00
+            </p>
+        </div>
+        <div class="" cardType="2">
+            <p class="selectWrap HCloseBtn">
+                08:30
+            </p>
+        </div>
+        <div class="" cardType="2">
+            <p class="selectWrap HCloseBtn">
+                09:00
+            </p>
+        </div>
+        <div class="nvyi nvyiPriceDiv" cardType="2">
+            <p class="selectWrap HCloseBtn">
+                09:30
+            </p>
+        </div>
+    </div>-->
+
+        <input class="confirmAppoint" type="submit" value="确认预约">
+</div>
+</form>
+<div id="sexSelect">
+    <h3>请选择</h3>
+    <div userSex="2" class="manPriceDiv" cardType="0">
+        男
+    </div>
+    <div userSex="1" class="nvyi nvyiPriceDiv" cardType="2">
+        女
+    </div>
+</div>
+<div id="yiweiSelect">
+    <h3>请选择</h3>
+    <div maritalStatus="2" class="manPriceDiv" cardType="0">
+        已婚
+    </div>
+    <div maritalStatus="1" class="nvyi nvyiPriceDiv" cardType="2">
+        未婚
+    </div>
+</div>
+
+<div id="confirmFrame">
+    <div class="appointSDiv"><img class="appointS" src="images/appointS.png" alt=""><span style="float: left;margin-top: 5px;color:#38DD83;font-size: 15px; ">预约成功</span></div>
+    <div class="tianjia" cardType="0">
+        您的预约项目已添加至“我的预约”
+    </div>
+    <div class="myAppoint" cardType="2">
+        <a ng-click="myAppoint()" id="myAppoint">我的预约</a>
+    </div>
+</div>
+
+
+<!--<script>
+    $('#confirmFrame').hDialog({
+        width: 250,
+        height: 170,
+        modalHide: false,
+        isOverlay: false,
+        autoShow: true,
+        closeHide: false
+    })
+
+</script>-->
+
+
+
+
+
+
+
+
+
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+    </a>
+</div>
+<div class="clearBoth"></div>

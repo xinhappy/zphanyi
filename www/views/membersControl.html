@@ -1,0 +1,101 @@
+<style>
+    body {
+        background-color: #F7F7F9;
+    }
+
+
+    li {
+        list-style: none;
+        background-color: #ffffff;
+    }
+
+
+     i{
+        font-style: normal;
+    }
+
+    .list {
+        overflow: hidden;
+        /*margin-top: .1rem;*/
+        /*padding-left: .3rem;*/
+        border-top: 1px solid #ddd;
+    }
+
+
+    .list ul {
+        padding-left: 0 !important;
+        margin-top: 0;
+        font-size: 3.8vw;
+    }
+
+
+    .list li {
+        overflow: hidden;
+        width: 120%;
+        border-bottom: 1px solid #ddd;
+        padding-left: 2vw;
+        position: relative;
+    }
+
+
+    .list li a {
+        display: block;
+        height: 10vw;
+        line-height: 10vw;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+
+
+    .list li i {
+        float: right;
+        width: 15%;
+        text-align: center;
+        background: #E2421B;
+        color: #fff;
+    }
+
+
+    .swipeleft {
+        transform: translateX(-17%);
+        -webkit-transform: translateX(-17%);
+    }
+</style>
+
+<div class="mallHeader">
+    我的联系人
+</div>
+
+<!--<div class="waitPay">-->
+<!--<a ng-click="orderDetail()" href="#/orderDetail" ng-repeat="item in waitPay" class="waitOrder waitDeliver">
+        <p class="orderNo">订单号: <span>{{item.orderNo}}</span></p>
+        <div class="imgWrap">
+            <img ng-repeat="imgI in item.goodsVoList as allImg" ng-src="{{imgIp+imgI.coverUrl}}" alt="">
+            <span ng-if="allImg.length<2" class="orderFirstName">{{item.goodsVoList[0].goodsName}}</span>
+        </div>
+        <p class="pContent">共<span>{{allImg.length}}</span>件商品 需付款: <span>{{item.orderAmount | currency: "￥"}}</span></p>
+        <span class="waitPayA deliverA" href="">查看物流</span>
+    </a>-->
+
+<!--</div>-->
+<div style="height: 10vw;"></div>
+<div class="list">
+    <ul>
+        <li member-Directive ng-repeat="item in membersRows"><a><span ng-click="membersData(item.userType )" class="membersName">{{item.personName}}</span> <span ng-click="membersData(item.userType )" class="membersSex" ng-if="item.userSex == '1'">女</span><span ng-click="membersData(item.userType )" class="membersSex" ng-if="item.userSex == '2'">男</span><span ng-if="item.userType == '0'" ng-click="membersData(item.userType )" class="membenren">本人</span><span ng-click="membersData(item.userType )" style="position: absolute; width: 37vw; display: inline-block; height: 10vw;"> </span><span ng-click="membersData(item.userType )" class="membersCard">{{item.userCard}}</span><span ng-if="!item.userCard">请完善信息</span><i ng-click="deleteMember($index)">删除</i></a></li>
+    </ul>
+</div>
+<a href="#/addContacts"><input class="addAddress" type="button" value="+新添加联系人"></a>
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

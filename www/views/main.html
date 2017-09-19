@@ -1,0 +1,29 @@
+<div class="swiper-container mainSwiper-container">
+    <div class="swiper-wrapper">
+        <div on-Finish-Render-Filters="ngRepeatFinished" ng-repeat="item in rows" class="swiper-slide">
+            <a ng-if="item.articleLink == ''" class="mainFirstA" ui-sref="mainTemp({id:item.programCode})"><img ng-src="{{imgIp+item.background}}" alt=""></a>
+            <a ng-if="item.articleLink != ''" class="mainFirstA" href="{{item.articleLink}}"><img ng-src="{{imgIp+item.background}}" alt=""></a>
+        </div>
+        <!--<div class="swiper-slide"><img src="images/index1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/index1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/index1.jpg" alt=""></div>-->
+    </div>
+    <div class="swiper-pagination mainSwiper-pagination"></div>
+</div>
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a href="#/home" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a href="#/home" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>
+<script>
+
+</script>

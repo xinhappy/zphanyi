@@ -1,0 +1,47 @@
+<div class="allMask"></div>
+<div class="appointWrap">
+    <h1 class="appointH1">
+        选择预约方式
+    </h1>
+    <form class="appointForm" action="">
+        <div class="inputTitle">
+            <span class="yigouColor"></span><span>已购买套餐预约</span>
+        </div>
+        <div class="inputWrap inputPadding" id="buyTaocan">
+            <input tabindex="11" type="radio" id="square-radio-1" name="taocan">
+            <label id="taocanWrap" class="labelMargin" for="square-radio-1"><span ng-if="yigou.length > 0">选择已购买套餐进行预约</span><span ng-if="yigou.length == 0">您未购买过套餐</span></label>
+            <div class="buyTaocan">
+                <div setMealId="" appoint-Finished ng-repeat="item in yigou">{{item.cardName}}({{item.cardNo}})</div>
+            </div>
+        </div>
+        <div class="inputTitle">
+            <span class="kahaoColor"></span><span>套餐卡号预约</span>
+        </div>
+        <div class="inputWrap" id="cardNo">
+            <input tabindex="11" type="radio" id="square-radio-2" name="taocan">
+            <label class="labelMargin" for="square-radio-2"></label><input id="inputCardNo" class="kahao" type="text" placeholder="填写卡号进行预约">
+        </div>
+        <div class="inputTitle">
+            <span class="otherColor"></span>其他预约</span>
+        </div>
+        <div id="mealAfter" class="inputWrap inputPadding">
+            <input tabindex="11" type="radio" id="square-radio-3" name="taocan">
+            <label class="labelMargin" for="square-radio-3">选择套餐后预约，支持到店支付</label>
+        </div>
+        <input class="nextBtn" ng-click="appointNext()" type="button" value="下一步">
+    </form>
+    <div class="bottomBlank"></div>
+    <div class="footerNav">
+
+        <a ng-click="goback()" class="backIcon">
+
+        </a>
+        <a href="#/home" class="homeIcon">
+
+        </a>
+        <a id="easemob" class="userIcon">
+
+        </a>
+    </div>
+    <div class="clearBoth"></div>
+</div>

@@ -1,0 +1,70 @@
+<style>
+    .lbtTitle {
+        display: none;
+        text-align: center;
+        color: #1d1d1d;
+        font-weight: 500;
+        font-size: 17px;
+    }
+    
+    .lbtText {
+        display: none;
+        text-align: center;
+    }
+    
+    .lbtText p {
+        color: rgb(89, 89, 89);
+        margin: 0;
+        font-size: 15px;
+    }
+    
+    .blackBorder {
+        width: 39px;
+        height: 4px;
+        background-color: black;
+        margin: 4px auto 25px auto;
+    }
+</style>
+<div class="swiper-container lbtDetailSwiper-container">
+    <div class="swiper-wrapper">
+        <div on-Finish-Render-Filters="ngRepeatFinished" ng-repeat="item in rows" class="swiper-slide">
+            <a ng-if="item.publishedMedia != '1'" ng-click="deliverData()" ui-sref="lbtDetailNext({id:item.programCode,articleId:item.articleId})"><img ng-src="{{imgIp+item.imgList[0].fileUrl}}" alt=""></a>
+            <a ng-if="item.publishedMedia == '1'" href="{{item.articleLink}}"><img ng-src="{{imgIp+item.imgList[0].fileUrl}}" alt=""></a>
+            <!--<a ng-if="item.publishedMedia != '1'" class="homeFirstA" publishedMedia='{{item.publishedMedia}}' ui-sref="lbtDetail({id:item.programCode,articleId:item.articleId})"><img ng-src="{{imgIp+item.imgList[0].fileUrl}}" alt=""></a>
+            <a ng-if="item.publishedMedia == '1'" href="{{item.articleLink}}" class="homeFirstA"><img ng-src="{{imgIp+item.imgList[0].fileUrl}}" alt=""></a>-->
+        </div>
+        <!--<div class="swiper-slide">
+            <a href="#/lbtDetail"><img src="images/254a65dfd759467290bf21a07fea4612.jpg" alt=""></a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#/lbtDetail"><img src="images/254a65dfd759467290bf21a07fea4612.jpg" alt=""></a>
+        </div>-->
+    </div>
+    <div class="swiper-pagination lbtDetailSwiper-pagination"></div>
+</div>
+<div class="lbtTitle" ng-repeat="item in rows" ng-bind-html="item.articleTittle">
+
+</div>
+<div class="blackBorder"></div>
+<div class="lbtText" ng-repeat="item in rows" ng-bind-html="item.articleContextStyle">
+
+</div>
+
+
+
+<a ng-if="item.publishedMedia != '1'" class="bottom_index" ng-repeat="item in rows" ui-sref="lbtDetailNext({id:item.programCode,articleId:item.articleId})"><img src="images/bottom_index.png" alt=""></a>
+<a href="{{item.articleLink}}" ng-if="item.publishedMedia == '1'" class="bottom_index" ng-repeat="item in rows"><img src="images/bottom_index.png" alt=""></a>
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

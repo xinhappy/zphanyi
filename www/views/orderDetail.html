@@ -1,0 +1,83 @@
+<style>
+    body {
+        background-color: #F7F7F9;
+    }
+    
+    .dialog-btn span {
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 3px;
+        margin: 0 15px;
+        cursor: pointer;
+    }
+</style>
+<div class="mallHeader">
+    订单详情
+</div>
+
+<div class="orderDetail">
+    <div class="orderDetailOrderNo">
+        <span>订单号:</span><span>{{orderDetail.orderNo}}</span><span ng-if="orderDetail.orderStatus == '0'" class="orderRight">等待付款</span><span
+            ng-if="orderDetail.orderStatus == '2'" class="orderRight">等待收货</span>
+    </div>
+    <!--<div class="orderDetailOrderAddress">
+        <div class="orderInfo">
+            <p class="namePhone"><span class="nickname" ng-bind="orderDetail.consignee"></span>
+                <span ng-bind="orderDetail.receiptPhone" class="telephone"></span>
+            </p>
+            <p class="addressDetail"><img class="gpspng" src="images/gpspng.png" alt=""><span>{{orderDetail.province+orderDetail.city+oorderDetail.county}}</span>-<span>{{orderDetail.address}}</span></p>
+        </div>
+    </div>-->
+    <div class="goodsWrap">
+        <div ng-repeat="item in orderDetail.goodsVoList" class="orderMeal orderDetailGoods">
+            <img class="mealImg" ng-src="{{imgIp+item.coverUrl}}" alt="">
+            <div class="mealContent">
+                <p class="mealname" ng-bind="item.goodsName"></p>
+                <span class="mealPrice">{{item.goodsPrice | currency:'￥'}}</span>
+                <p class="mealType"><span>体检卡类型:</span><span ng-if="item.cardType == 0">男性</span><span ng-if="item.cardType == 1">女性未婚</span><span
+                        ng-if="item.cardType == 2">女性已婚</span></p>
+            </div>
+            <div style="float: right;margin-top: 16%;color: #a0a0a0;">x{{item.goodsNum}}</div>
+        </div>
+    </div>
+    <div class="orderDeliver">
+        <span class="peisong">支付配送</span>
+        <div class="zhifuDiv">
+            <span>支付宝支付</span><br>
+            <span class="deliverType">快递运输</span>
+        </div>
+    </div>
+    <div class="orderDeliver">
+        <span class="peisong">订单金额</span>
+        <div class="orderTime">
+            <p class="orderAmount">{{orderDetail.orderAmount | currency: "￥"}}</p>
+            <p class="deliverType">下单时间:{{orderDetail.createTime | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+        </div>
+
+    </div>
+</div>
+<div ng-show="orderDetail.orderStatus == '0'" class="goPayFixed">
+    <span ng-click="cancleOrder()">取消订单</span><a ng-click="goPayDetail()"><span class="twoSpan">去支付</span></a>
+</div>
+<div ng-show="orderDetail.orderStatus == '2'" class="goPayFixed">
+    <span ng-click="logistics()" class="twoSpan">查物流</span>
+</div>
+<div id="confirmLayer"></div>
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

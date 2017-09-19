@@ -1,0 +1,101 @@
+<style>
+    body {
+        background-color: #F7F7F9;
+    }
+    
+    li {
+        list-style: none;
+        background-color: #ffffff;
+    }
+    
+    i {
+        font-style: normal;
+    }
+    /*a {
+        color: #393939;
+        text-decoration: none;
+    }*/
+    
+    .list {
+        overflow: hidden;
+        /*margin-top: .1rem;*/
+        /*padding-left: .3rem;*/
+        border-top: 1px solid #ddd;
+    }
+    
+    .list ul {
+        padding-left: 0 !important;
+        margin-top: 0;
+        font-size: 3.8vw;
+    }
+    
+    .list li {
+        overflow: hidden;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        padding-left: 2vw;
+        position: relative;
+    }
+    
+    .list li a {
+        display: block;
+        height: 10vw;
+        line-height: 10vw;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+    
+    .list li i {
+        float: right;
+        width: 15%;
+        text-align: center;
+        background: #E2421B;
+        color: #fff;
+    }
+    
+    .swipeleft {
+        transform: translateX(-17%);
+        -webkit-transform: translateX(-17%);
+    }
+    
+    .membersNameRight {
+        color: #7A7A7A;
+        padding-right: 2vw;
+        width: 50vw;
+        float: right;
+        text-align: right;
+    }
+</style>
+<div class="mallHeader editInfoHeader">
+    <span>我的联系人</span>
+    <a ng-click="editContact()" class="editSelect" style="color: #1d1d1d;margin-left: 27vw;">编辑</a>
+</div>
+<div style="height: 10vw;"></div>
+<div class="list">
+    <ul>
+        <li><a><span class="membersName">姓名</span><span class="membersName membersNameRight">{{membersData.personName}}</span></a></li>
+        <li><a><span class="membersName">手机号</span><span class="membersName membersNameRight">{{membersData.telephone}}</span></a></li>
+        <li><a><span class="membersName">身份证号</span><span class="membersName membersNameRight">{{membersData.userCard}}</span></a></li>
+        <li><a><span class="membersName">婚姻状况</span><span class="membersName membersNameRight" ng-if="membersData.maritalStatus =='1'">未婚</span><span class="membersName membersNameRight" ng-if="membersData.maritalStatus =='2'">已婚</span></a></li>
+        <li><a><span class="membersName">性别</span><span class="membersName membersNameRight" ng-if="membersData.userSex =='2'">男</span><span class="membersName membersNameRight" ng-if="membersData.userSex =='1'">女</span></a></li>
+        <li><a><span class="membersName">年龄</span><span class="membersName membersNameRight">{{membersData.age}}</span></a></li>
+        <li><a><span class="membersName">身高</span><span class="membersName membersNameRight">{{membersData.height}}</span></a></li>
+        <li><a><span class="membersName">体重</span><span class="membersName membersNameRight">{{membersData.weight}}</span></a></li>
+    </ul>
+</div>
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

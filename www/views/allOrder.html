@@ -1,0 +1,50 @@
+<style>
+    body {
+        background-color: #F7F7F9;
+    }
+</style>
+<div class="mallHeader">
+    我的订单
+</div>
+
+<div class="waitPay">
+    <a ng-click="orderDetail()"  ng-repeat="item in waitPay" class="waitOrder"><!--href="#/orderDetail"-->
+        <!--<a href="#/home" class="waitOrder">-->
+        <div class="imgWrap">
+            <!--<img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">
+            <img src="images/waitpay.jpg" alt="">-->
+            <img ng-repeat="imgI in item.goodsVoList as allImg" ng-src="{{imgIp+imgI.coverUrl}}" alt="">
+            <span ng-if="allImg.length<2" class="orderFirstName"> {{item.goodsVoList[0].goodsName}}</span>
+        </div>
+        <p ng-if="item.orderStatus == '0'" class="pContent">共<span>{{item.goodsNum}}</span>件商品 需付款: <span>￥ {{item.orderAmount}}</span></p>
+        <p ng-if="item.orderStatus == '4'" class="pContent">共<span>{{item.goodsNum}}</span>件商品 需付款: <span>￥ {{item.orderAmount}}</span></p>
+        <p ng-if="item.orderStatus == '2'" class="pContent">共<span>{{item.goodsNum}}</span>件商品 已付款: <span>￥ {{item.orderAmount}}</span></p>
+        <span ng-if="item.orderStatus == '0'" class="waitPayA" href="">去支付</span>
+        <span ng-if="item.orderStatus == '2'" class="waitPayA " href="">待收货</span>
+        <span ng-if="item.orderStatus == '4'" class="waitPayA " href="">已取消</span> <!--deliverA-->
+    </a>
+
+</div>
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

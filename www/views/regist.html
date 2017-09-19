@@ -1,0 +1,32 @@
+<style>
+    body {
+        background: url(/images/login_bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+</style>
+<div class="mallHeader loginHeader mallHeaderStatic">
+    <a ng-click="goback()" class="menu"><img src="images/nav_back_black@3x.png" alt=""></a>
+    <span>注册</span>
+</div>
+<div class="registWel">
+    <h1>您好!</h1>
+    <p>欢迎注册中平韩一会员</p>
+</div>
+<form class="loginForm registForm" ng-submit="sub()">
+    <div class="loginInput">
+        <img src="images/login_acc.png" alt=""><input id="regist_telephone" name="telephone" ng-model="usrData.telephone" type="text" placeholder="请输入手机号">
+    </div>
+    <div class="loginInput">
+        <img src="images/reg_code.png" alt=""><input maxlength="10" name="verifyCode" ng-model="usrData.verifyCode"  type="text" placeholder="请输入验证码">
+        <div class="clearBoth"></div>
+        <input type="button" class="reqCode" id="reqCode" value="获取验证码" />
+    </div>
+    <div class="loginInput">
+        <img src="images/login_pass.png" alt=""><input name="password"  ng-model="usrData.password" type="password" placeholder="设置密码（不少于6位字符）">
+    </div>
+    <div class="loginInput">
+        <img src="images/login_pass.png" alt=""><input name="passwordAgain"  ng-model="usrData.passwordAgain" type="password" placeholder="确认密码">
+    </div>
+    <input class="loginSubmit" type="submit" value="注册">
+</form>

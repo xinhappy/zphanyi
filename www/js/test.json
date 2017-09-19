@@ -1,0 +1,123 @@
+{
+    "resultCode": "1",
+    "resultDesc": null,
+    "resultData": "0",
+    "total": 0,
+    "curPage": 0,
+    "rows": [
+        {
+            "articleId": "4028c27c5900464c0159005e7ffa0001",
+            "chiefId": "4028810958fffc590159000c76420000",
+            "chiefName": "韩一介绍",
+            "chiefCode": "HYJS",
+            "programId": "4028c27c59000c6101590017ec9e0002",
+            "programCode": "GSJS",
+            "programName": "公司介绍",
+            "type": null,
+            "articleUuid": "4028c27c5900464c01590082f50e0010,",
+            "articleTittle": "公司介绍",
+            "articleContext": "中平韩一是一种“文化”，\n我们将会以一颗真挚的心去对待每一位顾客\n中平韩一引进国际先进的现代化高端医疗\n设备为您带来安全、精准的健康检查\n",
+            "articleContextStyle": "<p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed; text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">中平韩一是一种“文化”，</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed; text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">我们将会以一颗真挚的心去对待每一位顾客</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed; text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">中平韩一引进国际先进的现代化高端医疗</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed; text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">设备为您带来安全、精准的健康检查</span></p>",
+            "articleAuthor": null,
+            "publishedMedia": null,
+            "articleLink": null,
+            "publishedDate": 1482898978000,
+            "topDispaly": "0",
+            "sortNo": 3,
+            "childrenArticleContext": null,
+            "terminalType": null,
+            "background": "/uploadFilenull",
+            "remark": "中平韩一是一种“文化”   我们将会以一颗真挚的心去对待每一位顾客\n中平韩一引进国际先进的现代化高端医疗设备，为您带来安全、精准的健康检查\n",
+            "imgList": [
+                {
+                    "fileName": "公司介绍首页.jpg",
+                    "fileUrl": "/uploadFile/2016-12-15/254a65dfd759467290bf21a07fea4612.jpg",
+                    "fileMathName": "254a65dfd759467290bf21a07fea4612.jpg",
+                    "fileType": "jpg",
+                    "fileSize": 2076465,
+                    "downloadCount": null,
+                    "sortNo": 0,
+                    "width": 1000,
+                    "height": 1000
+                }
+            ]
+        },
+        {
+            "articleId": "4028c27c5900464c0159006068ab0003",
+            "chiefId": "4028810958fffc590159000c76420000",
+            "chiefName": "韩一介绍",
+            "chiefCode": "HYJS",
+            "programId": "4028c27c59000c610159001aed4b0003",
+            "programCode": "YLSBJS",
+            "programName": "医疗设备介绍",
+            "type": null,
+            "articleUuid": "4028c27c5900464c0159006046ba0002,",
+            "articleTittle": "医疗设备介绍",
+            "articleContext": "以最先进的医疗设备\n温馨的氛围和韩国式服务\n为顾客提供最准确最舒适的健康体检\n",
+            "articleContextStyle": "<p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed;text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">以最先进的医疗设备</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed;text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">温馨的氛围和韩国式服务</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed;text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">为顾客提供最准确最舒适的健康体检</span></p>",
+            "articleAuthor": null,
+            "publishedMedia": null,
+            "articleLink": null,
+            "publishedDate": 1482898978000,
+            "topDispaly": "0",
+            "sortNo": 2,
+            "childrenArticleContext": null,
+            "terminalType": null,
+            "background": "/uploadFilenull",
+            "remark": "以最先进的医疗设备，温馨的氛围和韩国式服务 ，为顾客提供最准确最舒适的健康体检\n",
+            "imgList": [
+                {
+                    "fileName": "页面.jpg",
+                    "fileUrl": "/uploadFile/2016-12-15/fe5678629388423daef7dd2a6316edcb.jpg",
+                    "fileMathName": "fe5678629388423daef7dd2a6316edcb.jpg",
+                    "fileType": "jpg",
+                    "fileSize": 1729322,
+                    "downloadCount": null,
+                    "sortNo": 0,
+                    "width": 1000,
+                    "height": 1000
+                }
+            ]
+        },
+        {
+            "articleId": "4028c27c5900464c0159006112330005",
+            "chiefId": "4028810958fffc590159000c76420000",
+            "chiefName": "韩一介绍",
+            "chiefCode": "HYJS",
+            "programId": "4028c27c59000c610159001c3d200004",
+            "programCode": "YSJS",
+            "programName": "医生介绍",
+            "type": null,
+            "articleUuid": "8a2c7537598b99ee0159918632480040,",
+            "articleTittle": "医生介绍",
+            "articleContext": "中平韩一拥有河南权威且经验丰富\n的强大医疗团队，提供最精准的\n检测和最好的服务\n\n",
+            "articleContextStyle": "<p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed;text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">中平韩一拥有河南权威且经验丰富</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed;text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">的强大医疗团队，提供最精准的</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; direction: ltr; unicode-bidi: embed; text-align: center;\"><span style=\"font-family: 微软雅黑,Microsoft YaHei; color: rgb(89, 89, 89); font-size: 16px;\">检测和最好的服务<br/></span></p>",
+            "articleAuthor": "",
+            "publishedMedia": "",
+            "articleLink": "",
+            "publishedDate": 1484209512000,
+            "topDispaly": "0",
+            "sortNo": 1,
+            "childrenArticleContext": null,
+            "terminalType": null,
+            "background": "/uploadFile/cmsArticle/2017-01-12/1869c69a7ab04e5ba4144fd35bb1ff6d.jpg",
+            "remark": "中平韩一拥有河南权威且经验丰富的强大医疗团队，提供最精准的检测和最好的服务",
+            "imgList": [
+                {
+                    "fileName": "医生－首页.jpg",
+                    "fileUrl": "/uploadFile/cmsArticle/2017-01-12/805eeed8f89d4ee4bffa3c2189fb0edd.jpg",
+                    "fileMathName": "805eeed8f89d4ee4bffa3c2189fb0edd.jpg",
+                    "fileType": "jpg",
+                    "fileSize": 94422,
+                    "downloadCount": null,
+                    "sortNo": 0,
+                    "width": 1000,
+                    "height": 1000
+                }
+            ]
+        }
+    ],
+    "object": null,
+    "sCount": 0,
+    "fCount": 0
+}

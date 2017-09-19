@@ -1,0 +1,81 @@
+<style>
+    body {
+        background-color: #F7F7F9;
+    }
+    
+    .addDate {
+        /*height: 8vw;*/
+        font-size: 4vw;
+        line-height: 8vw;
+        margin-left: 2vw;
+    }
+    
+    .spanSpan {
+        border: 1px solid #d1d1d1;
+        padding-right: 2vw;
+    }
+    
+    .selectHealthDateSpanimg {
+        width: 5vw;
+        margin-left: 2vw;
+    }
+    
+    .selectHealthDate {
+        position: absolute;
+        left: 38vw;
+        top: 6vw;
+    }
+</style>
+<div class="allMask"></div>
+<div class="addDate"><span>体检日期: </span>
+    <span class="spanSpan"><span class="selectHealthDateSpan">{{queryDate[0].checkTime}}</span><img class="selectHealthDateSpanimg"
+        src="images/downtime.png" alt=""></span>
+    <div class="selectHealthDate">
+        <div checknum={{item.checkTime}} health-Project ng-repeat="item in queryDate">{{item.checkTime}}</div>
+    </div>
+    <div>姓名：<span ng-bind="queryDate[0].userCname"></span></div>
+    <div>年龄：<span ng-bind="queryDate[0].age"></span></div>
+</div>
+
+<div class="healthProject">
+    <a ng-click="projectOne()" style="border-right: 1px solid #bcbcbc; border-bottom: 1px solid #bcbcbc;" href="">
+        <img src="images/shentinianling.png" alt="">
+        <p style="margin-bottom:0 ">身体年龄</p>
+        <p style="margin-top: 0">(含代谢症候群)</p>
+    </a>
+    <a ng-click="projectTwo()" style="border-bottom: 1px solid #bcbcbc;" href="">
+        <img src="images/jiating.png" alt="">
+        <p>家庭医学</p>
+    </a>
+    <a ng-click="projectThree()" style="border-right: 1px solid #bcbcbc;" href="">
+        <img src="images/yingyan.png" alt="">
+        <p>鹰演报告</p>
+    </a>
+    <a ng-click="projectFour()" href="">
+        <img src="images/renti.png" alt="">
+        <p>人体成分分析报告</p>
+    </a>
+</div>
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>
+
+<script>
+    // $('.spanSpan').click(function () {
+    //     $('.allMask').show()
+    //     $('.selectHealthDate').show()
+    // })
+
+</script>

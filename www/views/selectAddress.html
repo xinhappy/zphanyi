@@ -1,0 +1,47 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+
+
+    .red {
+        color: #F03339 !important;
+    }
+</style>
+<div class="mallHeader">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>收货地址</span>
+</div>
+<div style="height: 10vw;"></div>
+<div address-Control ng-repeat="item in addressData.rows" class="addressDiv seleceAddressDiv">
+    <div ng-click="checkedAddress()" class="left">
+        <p ng-class="{1 :'red'}[item.isDefault]" class="namePhone"><span class="nickname" ng-bind="item.consignee"></span><span ng-bind="item.mobilePhone"></span><img class="defaultFont"
+                ng-if="item.isDefault == '1'" src="images/defaultFont.png" alt=""></p>
+        <p class="addressDetail"><span>{{item.province+item.city+item.county}}</span>-<span>{{item.address}}</span></p>
+    </div>
+    <div ng-click="editGoodAddress()" class="seleceAddressEdit"><img src="images/edit.png" alt=""></div>
+</div>
+<div style="height: 18vw;"></div>
+
+
+
+
+
+<div class="addAddressDiv">
+    <a href="#/addAddress1"><input ng-click="clearData()" class="addAddress" type="button" value="+新增收货地址"></a>
+</div>
+<div id="confirmLayer"></div>
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

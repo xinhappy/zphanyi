@@ -1,0 +1,25 @@
+<style>
+    body {
+        background: url(/images/login_bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+</style>
+<div class="mallHeader loginHeader mallHeaderStatic">
+    <a ng-click="goback()" class="menu"><img src="images/nav_back_black@3x.png" alt=""></a>
+    <span>使用验证码登录</span>
+</div>
+<div class="login_logo">
+    <img src="images/login_logo.png" alt="">
+</div>
+<form class="loginForm registForm forgetForm" ng-submit="sub()">
+    <div class="loginInput">
+        <img src="images/login_acc.png" alt=""><input id="qrcodeTelephone" name="telephone" ng-model="userData.telephone" type="text" placeholder="账号">
+    </div>
+    <div class="loginInput">
+        <img src="images/reg_code.png" alt=""><input name="verifyCode" ng-model="userData.verifyCode" type="text" placeholder="请输入验证码">
+        <div class="clearBoth"></div>
+        <input type="button" class="reqCode" id="forget_reqCode" value="获取验证码" />
+    </div>
+    <input class="loginSubmit" type="submit" value="会员登录">
+</form>

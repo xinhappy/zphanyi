@@ -1,0 +1,63 @@
+<style>
+    .swiper-container {
+        width: 100%;
+        margin: 20px auto 0 auto;
+        height: 113vw;
+    }
+    
+    .swiper-slide {
+        width: 60%;
+        /*border: 1px solid red;*/
+        padding-top: 1px;
+    }
+    
+    .swiper-slide img {
+        width: 100%;
+        border-radius: 5vw;
+        border: 1px solid #ffffff;
+        box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .2);
+    }
+    
+    .swiper-pagination-fraction {
+        color: #8D8D8D;
+    }
+</style>
+<div class="mallHeader mallHeaderStatic">
+    <span>选择套餐</span>
+</div>
+
+
+<!-- Swiper -->
+<div class="swiper-container selectMeal-container">
+    <div class="swiper-wrapper">
+        <div select-Meal ng-repeat="item in selectMealRows" class="swiper-slide">
+            <!--<a ui-sref="setMealDetail({id:item.id})"><img ng-src="{{imgIp+item.logo}}" alt=""></a>-->
+            <a href="#/selectMealDetail"><img ng-src="{{imgIp+item.logo}}" alt=""></a>
+        </div>
+        <!--<div class="swiper-slide"><img src="images/409dc2b4e8754875a494725a03e816f2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/409dc2b4e8754875a494725a03e816f2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/409dc2b4e8754875a494725a03e816f2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/409dc2b4e8754875a494725a03e816f2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/409dc2b4e8754875a494725a03e816f2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/409dc2b4e8754875a494725a03e816f2.jpg" alt=""></div>-->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination selectMeal-pagination"></div>
+</div>
+
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

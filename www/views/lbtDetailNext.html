@@ -1,0 +1,44 @@
+<style>
+    /** {
+        font-size: 15px !important;
+        line-height: 20px !important;
+    }*/
+    
+    img {
+        display: block !important;
+        width: 100vw !important;
+    }
+</style>
+<div class="mallHeader">
+    {{deliverData.articleTittle}}
+</div>
+<div style="height: 10vw;width: 100%;"></div>
+<div ng-show="!show" id="articleContextStyle" ng-bind-html="articleContextStyle">
+
+</div>
+<div ng-repeat="item in rows" class="imgList">
+    <a ng-href="{{item.articleLink}}">
+        <img ng-repeat="iImg in item.imgList" ng-src="{{imgIp+iImg.fileUrl}}" alt="">
+    </a>
+</div>
+
+
+<div id="doctorsInfo" ng-show="show">
+    <a ng-click="doctorsInfo()" ng-repeat="item in doctors.rows"><img ng-src="{{imgIp+item.descPhotoUrl}}" alt=""></a>
+</div>
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

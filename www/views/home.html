@@ -1,0 +1,49 @@
+<div style="min-height: 50vw;" class="swiper-container homeSwiper">
+    <div class="swiper-wrapper">
+        <div on-Finish-Render-Filters="ngRepeatFinished" ng-repeat="item in rows" class="swiper-slide">
+            <a class="homeFirstA" publishedMedia='{{item.publishedMedia}}' ui-sref="lbtDetail({id:item.programCode,articleId:item.articleId})"><img ng-src="{{imgIp+item.imgList[0].fileUrl}}" alt=""></a>
+        </div>
+    </div>
+    <div class="swiper-pagination home-pagination"></div>
+</div>
+<div class="mid_wrap">
+    <div class="mid_left">
+        <a id="appointLink" class="top"><img src="images/index_yuyue_bg.png" alt="">
+            <p class="mid_text">在线预约</p>
+        </a>
+        <a href="#/setMeal" class="bottom"><img src="images/index_taocan_bg.png" alt="">
+            <p class="mid_text">套餐服务</p>
+        </a>
+    </div>
+    <a href="#/mall" class="mid_right">
+        <img src="images/index_mall_bg.jpg" alt="">
+        <div class="text_bg">
+            <p class="textTitle">韩一商城</p>
+            <p class="rightText">韩一带您放心购买</p>
+        </div>
+    </a>
+</div>
+<div class="clearBoth"></div>
+<div class="bottomWrap">
+    <a href="#/healthNews" class="left">
+        <img src="images/index_news.jpg" alt="">
+    </a>
+    <a id="userCenter" href="#/userInfo" class="right">
+        <img src="images/index_vip_bg.png" alt="">
+        <p class="rightText">个人中心</p>
+    </a>
+</div>
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a href="#/main" class="backIcon">
+
+    </a>
+    <a class="homeIcon">
+
+    </a>
+    <a id="easemob"  class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

@@ -1,0 +1,117 @@
+<style>
+    body {
+        background-color: #F7F7F9;
+    }
+    a {
+        color: #333;
+    }
+
+    li {
+        list-style: none;
+        background-color: #ffffff;
+    }
+
+    .list {
+        overflow: hidden;
+        border-top: 1px solid #ddd;
+    }
+
+    .list ul {
+        padding-left: 0 !important;
+        margin-top: 0;
+    }
+
+
+    .list li {
+        overflow: hidden;
+        width: 120%;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
+
+    .list li a {
+        display: block;
+        height: 100%;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+
+    .list li i {
+        display: block;
+        width: 15%;
+        text-align: center;
+        background: #E2421B;
+        color: #fff;
+        position: absolute;
+        height: 25vw !important;
+        line-height: 25vw;
+        bottom: 0;
+        right: 0;
+        height: 20px;
+        font-style: normal;
+    }
+
+    .swipeleft {
+        transform: translateX(-17%);
+        -webkit-transform: translateX(-17%);
+    }
+</style>
+<div class="mallHeader">
+    购物车
+</div>
+<div class="emptyCart">
+    <img class="" src="images/emptyCart.png" alt="">
+    <p>购物车为空!
+    </p>
+</div>
+<div class="cartProducts list">
+    <ul>
+        <li on-Finish-Caselist="caselistFinished" ng-repeat="item in cartRows" class="cartProductsWrap">
+            <a>
+                <input shop-Car class="inputSquare" tabindex="11" type="checkbox" name="taocan">
+                <!--<label class="labelMargin"  for="square-radio-1">选择已购买套餐进行预约</label>-->
+                <div class="imgWrap">
+                    <img ng-src="{{imgIp+item.coverUrl}}" alt="">
+                </div>
+                <h3 ng-bind="item.goodsName"></h3>
+                <div class="twoAbsolute">
+                    <p class="tiyan"><span>体验卡类型:</span><span ng-bind="item.cardType"></span></p>
+                    <p class="price"><span>￥ </span><span ng-bind="item.goodsPrice"></span></p>
+                </div>
+                <p class="addMinus">
+                    <span><img ng-click="minus()" class="minusBtn" goodsId="{{item.goodsId}}" cardType="{{item.cardType}}" src="images/cart_minus.png" alt=""></span>
+                    <span ng-bind="item.goodsNum"></span>
+                    <span><img ng-click="add()" class="addBtn" goodsId="{{item.goodsId}}" cardType="{{item.cardType}}" src="images/cart_add.png" alt=""></span>
+                </p>
+                <i ng-click="deleteGood($index)">删除</i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="purchase">
+    <input class="inputSquare" id="allSelect" tabindex="11" type="checkbox" name="taocan">
+    <span class="allSelect">全选 </span><span>合计:</span><span class="money">&nbsp;</span><span class="allMoney">￥ {{sumTotal}}</span>
+    <a ng-click="goPurchase()" class="goPurchase" id="goPurchase">去结算</a>
+</div>
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>
+
+
+<script>
+
+</script>

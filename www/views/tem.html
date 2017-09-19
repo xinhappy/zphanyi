@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />-->
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        if ($scope.yigouMeal.cardType == '2') {
+            $('#yiweiInput').val('已婚')
+            myService.setObject('maritalStatus', '2')
+            $('#sexInput').val('女')
+            myService.setObject('userSex', '1')
+            $('#yiweiInput').click(function () {
+                $('#simple-dialogBox').dialogBox({
+                    hasMask: true,
+                    autoHide: true,
+                    time: 1300,
+                    content: '此体检卡婚姻状况不能再修改！'
+                })
+            })
+            $('#sexInput').click(function () {
+                $('#simple-dialogBox').dialogBox({
+                    hasMask: true,
+                    autoHide: true,
+                    time: 1300,
+                    content: '此体检卡性别不能再修改！'
+                })
+            })
+
+        } else if ($scope.yigouMeal.cardType == '1') {
+            $('#yiweiInput').val('未婚')
+            myService.setObject('maritalStatus', '1')
+            $('#sexInput').val('女')
+            myService.setObject('userSex', '1')
+            $('#yiweiInput').click(function () {
+                $('#simple-dialogBox').dialogBox({
+                    hasMask: true,
+                    autoHide: true,
+                    time: 1300,
+                    content: '此体检卡婚姻状况不能再修改！'
+                })
+            })
+            $('#sexInput').click(function () {
+                $('#simple-dialogBox').dialogBox({
+                    hasMask: true,
+                    autoHide: true,
+                    time: 1300,
+                    content: '此体检卡性别不能再修改！'
+                })
+            })
+
+        } else if ($scope.yigouMeal.cardType == '0') {
+            $('#yiweiInput').val('已婚')
+            myService.setObject('maritalStatus', '2')
+            // $rootScope.tijianData.maritalStatus = '2'
+            $('#sexInput').val('男')
+            myService.setObject('userSex', '2')
+            $('#sexInput').click(function () {
+                $('#simple-dialogBox').dialogBox({
+                    hasMask: true,
+                    autoHide: true,
+                    time: 1300,
+                    content: '此体检卡性别不能再修改！'
+                })
+            })
+            //已未婚选择框
+            $('#yiweiInput').hDialog({
+                box: '#yiweiSelect',
+                width: 230,
+                height: 170,
+                modalHide: false,
+                isOverlay: false
+            })
+            //可以选择已未婚情况
+            $('#yiweiSelect div').click(function () {
+                $('#yiweiInput').val($(this).text().trim())
+                if ($('#yiweiInput').val() == '未婚') {
+                    myService.setObject('maritalStatus', '1')
+                }
+                if ($('#yiweiInput').val() == '已婚') {
+                    myService.setObject('maritalStatus', '2')
+                }
+                console.log($rootScope.tijianData.maritalStatus)
+                $('#yiweiSelect').hide()
+                $('#HOverlay').remove()
+                $('#HCloseBtn').remove()
+            })
+        }
+    </script>
+</body>
+
+</html>
+
+
+/*
+    if ($scope.membersData.personName == undefined) {
+        console.log(99999)
+    } else {
+        $('#personName').val($scope.membersData.personName)
+        $('#telephone').val($scope.membersData.telephone)
+        $('#userCard').val($scope.membersData.userCard)
+        $('#tijianAge').val($scope.membersData.age)
+        $('#tijianHeight').val($scope.membersData.height)
+        $('#tijianWeight').val($scope.membersData.weight)
+        if ($scope.membersData.maritalStatus == '2') {
+            var maritalStatus = '已婚'
+        }
+        if ($scope.membersData.maritalStatus == '1') {
+            var maritalStatus = '未婚'
+        }
+        $('#yiweiInput').val(maritalStatus)
+        if ($scope.membersData.userSex == '2') {
+            var userSex = '男'
+        }
+        if ($scope.membersData.userSex == '1') {
+            var userSex = '女'
+        }
+    }
+
+*/
+
+if ($scope.membersData.maritalStatus == '2' && $scope.membersData.userSex == '1') {
+                var maritalStatus = '已婚'
+                var userSex = '女'
+                $('#personName').val($scope.membersData.personName)
+                $('#telephone').val($scope.membersData.telephone)
+                $('#userCard').val($scope.membersData.userCard)
+                $('#tijianAge').val($scope.membersData.age)
+                $('#tijianHeight').val($scope.membersData.height)
+                $('#tijianWeight').val($scope.membersData.weight)
+                // $('#yiweiInput').val(maritalStatus)
+                // $('#sexInput').val(userSex)
+            }
+            if ($scope.membersData.maritalStatus == '1' && $scope.membersData.userSex == '1') {
+                $('#simple-dialogBox').dialogBox({
+                    hasMask: true,
+                    autoHide: true,
+                    time: 1100,
+                    content: '此体检卡只适用于女未婚！'
+                })
+            }

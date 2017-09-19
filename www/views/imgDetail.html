@@ -1,0 +1,60 @@
+<style>
+    .swiper-container {
+        width: 100%;
+        margin: 20px auto 0 auto;
+        height: 80vw;
+    }
+
+    .swiper-slide {
+        width:100%;
+        /*border: 1px solid red;*/
+        padding-top: 1px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        /*border-radius: 5vw;*/
+        /*border: 1px solid #ffffff;*/
+        /*box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .2);*/
+    }
+
+    .swiper-pagination-fraction {
+        color: #8D8D8D;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        top:5%;
+        background-size: 15px 15px;
+    }
+</style>
+<div class="imgList">
+    <div class="swiper-wrapper">
+        <div repeat-img="imgAllFinished" ng-repeat="items in imgAll" class="swiper-slide">
+            <p style="text-align: center" ng-bind="items.physicalProjectName"></p>
+            <div class="swiper-slide">
+                <div class="swiper-container  setMealSwiper-container">
+                    <div class="swiper-wrapper">
+                        <div  ng-show="items.imgList[0].fileType=='jpg'||items.imgList[0].fileType=='png'||items.imgList[0].fileType=='jpeg'||items.imgList[0].fileType=='JPG'||items.imgList[0].fileType=='JPEG'||items.imgList[0].fileType=='PNG'"  repeat-img-list="imglistFinished" ng-repeat="item in items.imgList" class="swiper-slide">
+                            <img ng-src="{{imgIp+item.fileUrl}}">
+
+                        </div>
+                        <div style="margin:20px auto;" ng-show="items.imgList[0].fileType=='pdf'||items.imgList[0].fileType=='docx'||items.imgList[0].fileType=='xps'||items.imgList[0].fileType=='PDF'||items.imgList[0].fileType=='DOCX'||items.imgList[0].fileType=='XPS'">
+                            <a style="color: #666" ng-href="{{imgIp+items.imgList[0].fileUrl}}" ng-bind="items.imgList[0].fileName"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination setMealSwiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+<!--<div ng-show="showImg" class="swiper-container setMealSwiper-container">
+    <div class="swiper-wrapper">
+        <div on-Finish-Caselist="caselistFinished" ng-repeat="item in imgDetailData" class="swiper-slide">
+            <img ng-src="{{imgIp+item.fileUrl}}" alt="">
+        </div>
+    </div>
+
+    <div class="swiper-pagination setMealSwiper-pagination"></div>
+</div>-->

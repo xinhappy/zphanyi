@@ -1,0 +1,59 @@
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+
+    a {
+        color: #333;
+    }
+
+    a div {
+        border-bottom: 1px solid #d2d2d2;
+    }
+</style>
+<div class="mallHeader mallHeaderStatic">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>编辑收货人</span>
+</div>
+
+<div class="addAddressWrap">
+    <div class="inputWrap">
+        收货人:<input type="text" id="consignee" placeholder="请输入收货人姓名">
+    </div>
+    <div class="inputWrap">
+        联系方式:<input type="text" id="mobilePhone" placeholder="请输入联系方式">
+    </div>
+    <a href="#/province1">
+        <div ng-click="saveTwoData()" class="inputWrap">
+            所在地区:
+            <div ng-if="curProvince.text != undefined" class="curDist"><span>{{curProvince.text}}-{{curCity.text}}-{{curCounty.text}}</span></div>
+            <div ng-if="editAddressData.province != undefined" class="curDist"><span id="addressJoin">{{editAddressData.province}}-{{editAddressData.city}}-{{editAddressData.county}}</span></div>
+            <img src="images/right.png" alt="">
+        </div>
+    </a>
+    <div class="inputWrap">
+        详细地址:<input id="address" type="text" placeholder="请输入详细地址">
+    </div>
+</div>
+
+
+
+
+
+
+<input ng-click="editAddressForm()" class="addAddress" type="button" value="保存">
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

@@ -1,0 +1,42 @@
+<style>
+
+</style>
+<div class="mallHeader mallHeaderStatic">
+    <span>标准套餐</span>
+</div>
+
+
+<div class="myAppointDetail">
+    <div class="top">
+        <div class="topWrap">
+            <p class="kahao"><span class="space">卡号</span></span><span ng-bind="curMyAppoint.cardNo"></span></p>
+
+            <p><span class="space">姓名</span><span ng-bind="curMyAppoint.personName"></span>
+                <span class="space tijianName">电话</span><span ng-bind="curMyAppoint.telephone" class="phone"></span></p>
+
+            <p class="appointTime"><span class="space">预约时间</span><span>{{curMyAppoint.appointmentTime | date:'yyyy-MM-dd HH:mm:ss'}}</span></p>
+            <p ng-bind="curMyAppoint.setMealName"></p>
+            <p><span class="space">RMB</span><span ng-bind="curMyAppoint.price" class="money"></span></p>
+            <div class="appointSuc">预约成功</div>
+        </div>
+    </div>
+    <div class="bottom"></div>
+</div>
+
+
+
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

@@ -1,0 +1,142 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+</style>
+<div class="reportNav">
+    <div class="navCenter">
+        <a href="#/totalSug" class="totalSug">综述及建议</a>
+        <a href="#/healthRep" class="healthRep">体检报告</a>
+        <a href="#/imgRep" class="imgRep" style="background-color: #6B5ACD; color: #ffffff;">图片报告</a>
+    </div>
+</div>
+<div style="height: 10vw;"></div>
+<p class="dandu">单独报告书</p>
+<div class="imgRepWrap">
+    <!--<a ng-click="rentichengfen()" class="imgRepWrapDiv">
+        <img src="images/bodyCla.png" alt="">
+        <p>人体成分分析</p>
+    </a>-->
+    <div ng-repeat="item in dan" class="imgRepWrapDiv">
+        <a href="#/imgDetail/{{item.physicalProject}}">
+            <img ng-show="item.iconState==0" ng-src="images/dan{{$index}}.png" alt="">
+            <img ng-show="item.iconState==1" ng-src="images/dan_h{{$index}}.png" alt="">
+            <p ng-bind="item.physicalProjectName"></p>
+        </a>
+    </div>
+
+    <!--<a ng-click="dongmai()" class="imgRepWrapDiv">
+        <img src="images/dmyh.png" alt="">
+        <p>动脉硬化</p>
+    </a>
+    <a ng-click="feigongneng()" class="imgRepWrapDiv">
+        <img src="images/fgn.png" alt="">
+        <p>肺功能</p>
+    </a>
+    <a ng-click="xindiantu()" class="imgRepWrapDiv">
+        <img src="images/xdt.png" alt="">
+        <p>心电图</p>
+    </a>
+    <a ng-click="tingli()" class="imgRepWrapDiv">
+        <img src="images/tljc.png" alt="">
+        <p>听力检查</p>
+    </a>-->
+    <!--<a ng-click="shentinianling()" class="imgRepWrapDiv">
+        <img src="images/stnl.png" alt="">
+        <p>身体年龄分析</p>
+    </a>
+    <a ng-click="jiating()" class="imgRepWrapDiv">
+        <img src="images/jtyx.png" alt="">
+        <p>家庭医学</p>
+    </a>
+    <a ng-click="yufang()" class="imgRepWrapDiv">
+        <img src="images/yfyx.png" alt="">
+        <p>预防医学</p>
+    </a>
+    <a ng-click="yingyan()" class="imgRepWrapDiv">
+        <img src="images/yyqs.png" alt="">
+        <p>鹰演全身扫描</p>
+    </a>-->
+</div>
+<div class="clearBoth"></div>
+<p class="dandu">片子</p>
+<div class="imgRepWrap">
+    <div  ng-repeat="item in pin" class="imgRepWrapDiv">
+        <a  href="#/imgDetail/{{item.physicalProject}}">
+            <img ng-show="item.iconState==0" ng-src="images/pin{{$index}}.png" alt="">
+            <img ng-show="item.iconState==1" ng-src="images/pin_h{{$index}}.png" alt="">
+            <p ng-bind="item.physicalProjectName"></p>
+        </a>
+    </div>
+
+    <!--<a ng-click="DR()" class="imgRepWrapDiv">
+        <img src="images/dr.png" alt="">
+        <p>DR</p>
+    </a>
+    <a ng-click="gumidu()" class="imgRepWrapDiv">
+        <img src="images/gmd.png" alt="">
+        <p>骨密度</p>
+    </a>
+    <a ng-click="CT()" class="imgRepWrapDiv">
+        <img src="images/ctct.png" alt="">
+        <p>CT</p>
+    </a>
+    <a ng-click="heci()" class="imgRepWrapDiv">
+        <img src="images/hchc.png" alt="">
+        <p>核磁</p>
+    </a>
+    <a ng-click="PET()" class="imgRepWrapDiv">
+        <img src="images/petct.png" alt="">
+        <p>PET CT</p>
+    </a>
+    <a ng-click="caichao()" class="imgRepWrapDiv">
+        <img src="images/cccc.png" alt="">
+        <p>彩超</p>
+    </a>
+    <a ng-click="neikuijing()" class="imgRepWrapDiv">
+        <img src="images/nkj.png" alt="">
+        <p>内窥镜</p>
+    </a>
+
+    <a ng-click="yandi()" class="imgRepWrapDiv">
+        <img src="images/ydzx.png" alt="">
+        <p>眼底照相</p>
+    </a>-->
+</div>
+<div class="clearBoth"></div>
+<div style="height: 5vw;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bottomBlank">
+
+</div>
+<div class="footerNav">
+
+    <a href="#/queryReport" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

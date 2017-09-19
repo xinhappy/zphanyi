@@ -1,0 +1,139 @@
+<style>
+    body {
+        background-color: #F7F7F9;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        margin: 20px auto 0 auto;
+        height: 113vw;
+    }
+    
+    .swiper-slide {
+        width: 60%;
+        /*border: 1px solid red;*/
+        padding-top: 1px;
+    }
+    
+    .swiper-slide img {
+        width: 100%;
+        border-radius: 5vw;
+        border: 1px solid #ffffff;
+        box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .2);
+    }
+    
+    .swiper-pagination-fraction {
+        color: #8D8D8D;
+    }
+    
+    #pushBtn {
+        position: absolute;
+        top: 2vw;
+        left: 3vw;
+        width: 6vw;
+        height: 6vw;
+        background: url(/images/menu.png) no-repeat;
+        background-size: contain;
+        background-position: center center;
+        border: none;
+    }
+    
+    .detailSubmit {
+        border-radius: 0;
+    }
+
+</style>
+<div class="allMask"></div>
+<div id="st-container" class="st-container">
+    <div class="st-pusher">
+        <div class="st-menu st-effect-3" id="menu-3">
+            <div class="slideHeader">
+                <span>套餐分类</span><img src="images/logo_white.png" alt="">
+            </div>
+            <div class="slideBar"></div>
+            <p ng-click="slideData()" ng-repeat="item in taocanRows" ng-bind="item.goodsName"></p>
+        </div>
+        <div class="st-content">
+            <div id="st-trigger-effects" class="column">
+                <button id="pushBtn" data-effect="st-effect-3"></button>
+                <div class="mallHeader mallHeaderStatic">
+                    <span>体检套餐</span>
+                    <!--<a href="#/cart" class="cart"><img src="images/cart.png" alt=""></a>-->
+                </div>
+                <!-- Swiper -->
+                <div class="swiper-container setMealSwiper-container">
+                    <div class="swiper-wrapper">
+                        <div on-Finish-Caselist="caselistFinished" ng-repeat="item in taocanRows" class="swiper-slide">
+                            <a ui-sref="setMealDetail({id:item.id})"><img ng-src="{{imgIp+item.logo}}" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination setMealSwiper-pagination"></div>
+                </div>
+
+                <div class="shopBtn">
+                    <a id="easemob1" class="imgSpan"><img src="images/bottomMsg.png" alt=""></a>
+                    <a href="#/cart" class="imgSpan bottomMsg"><img src="images/bottomCar.png" alt=""></a>
+                    <input class="detailSubmit" ng-click="addCart()" type="button" value="加入购物车">
+                </div>
+
+
+                <div class="bottomBlank"></div>
+                <div class="footerNav">
+
+                    <a ng-click="goback()" class="backIcon">
+
+                    </a>
+                    <a href="#/home" class="homeIcon">
+
+                    </a>
+                    <a id="easemob" class="userIcon">
+
+                    </a>
+                </div>
+                <div class="clearBoth"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cartSelect">
+    <h3>请选择</h3>
+    <div class="manPriceDiv" cardType="0">
+        <p class="selectWrap HCloseBtn">
+            <span class="nan">男</span><span>性：</span><span>￥</span><span class="manPriceSpan"></span>
+        </p>
+    </div>
+    <div cardType="1" class="nvweiPriceDiv">
+        <p class="selectWrap HCloseBtn"><span>女性未婚：</span><span>￥</span><span class="nvweiPriceSpan"></span></p>
+    </div>
+    <div class="nvyi nvyiPriceDiv" cardType="2">
+        <p class="selectWrap HCloseBtn">
+            <span>女性已婚：</span><span>￥</span><span class="nvyiPriceSpan"></span>
+        </p>
+    </div>
+</div>
+
+<div id="cartSelect2">
+    <h3>请选择</h3>
+    <div class="manPriceDiv" cardType="0">
+        <p class="selectWrap HCloseBtn">
+            <span style="margin-right: 32px;" class="nan">男</span><span>性：</span><span>￥</span><span class="manPriceSpan"></span>
+        </p>
+    </div>
+    <div cardType="1" class="nvweiPriceDiv">
+        <p class="selectWrap HCloseBtn"><span>女性未婚：</span><span>￥</span><span class="nvweiPriceSpan"></span></p>
+    </div>
+    <div class="nvyi nvyiPriceDiv" cardType="2">
+        <p class="selectWrap HCloseBtn">
+            <span>女性已婚：</span><span>￥</span><span class="nvyiPriceSpan"></span>
+        </p>
+    </div>
+    <section class="nvyi nvyiPriceDiv" cardType="2">
+        <p class="selectWrap HCloseBtn">
+            取消
+        </p>
+    </section>
+</div>
+<script src="lib/pageslide/classie.js"></script>
+<script src="lib/pageslide/sidebarEffects.js"></script>

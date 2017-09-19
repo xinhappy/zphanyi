@@ -1,0 +1,103 @@
+<style class="productsStyle">
+    body {
+        background-color: #F7F7F9;
+    }
+    
+    .linshi {
+        width: 100%;
+    }
+    
+    .imgContent {
+        /*width: 100vw;*/
+        padding: 3px;
+        display: block;
+    }
+    
+    .liucheng {
+        width: 100vw;
+    }
+    
+    .discountPrice {
+        margin: 0;
+        color: #ffffff;
+        height: 7vw;
+        line-height: 7vw;
+    }
+    
+    .discountPrice span {
+        margin-left: 10vw;
+        font-size: 3.8vw;
+    }
+    .detailSubmit {
+        border-radius: 0;
+    }
+    .appPrice{
+        margin-left: 15vw !important;
+        color: #FFD966;
+    }
+</style>
+<div class="mallHeader">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span ng-bind="data.title"></span>
+</div>
+<div style="margin-top: 10.5vw;"></div>
+<a class="detailBanner">
+    <img ng-src="{{imgIp+data.background}}" alt="">
+</a>
+<a class="imgContent" style="margin-bottom: 0;padding-bottom: 0;padding-top: 0;width: 98vw;" href="#/productsDetailNext"
+    class="detailBanner">
+    <p style="background-color: #7588a3;" class="discountPrice"><span style="display:inline-block;width: 12vw;">男&nbsp;&nbsp;&nbsp;&nbsp;性</span><span style="margin-left: 20vw;text-decoration: line-through;">{{data.manPrice}}</span><span class="appPrice"></span>
+        <span style="margin-left: 2px;font-size: 4.5vw;font-weight: 600;color: #FFD966;">{{data.manDiscountPrice}}</span>
+    </p>
+    <p style="background-color: #50678a;" class="discountPrice"><span style="display:inline-block;width: 12vw;">女未婚</span><span style="margin-left: 20vw;text-decoration: line-through;">{{data.womanPriceNot}}</span><span class="appPrice"></span>
+        <span style="margin-left: 2px;font-size: 4.5vw;font-weight: 600;color: #FFD966;">{{data.womanDiscountPriceNot}}</span>
+    </p>
+    <p style="background-color: #7588a3;" class="discountPrice"><span style="display:inline-block;width: 12vw;">女已婚</span><span style="margin-left: 20vw;text-decoration: line-through;">{{data.womanPriceYet}}</span><span class="appPrice"></span>
+        <span style="margin-left: 2px;font-size: 4.5vw;font-weight: 600;color: #FFD966;">{{data.womanDiscountPriceYet}}</span>
+    </p>
+</a>
+<div class="detailNext">
+    <img ng-src="{{imgIp+data.contentImg}}" alt="">
+</div>
+<div id="imgFullscreen">
+    <img ng-src="{{imgIp+data.contentImg}}" alt="">
+</div>
+<!--<div class="inputBlue detailNextBtn"><input class="detailSubmit" type="submit" value="加入购物车"></div>-->
+<div style="height: 12vw;"></div>
+<div class="shopBtn">
+    <a id="easemob1" class="imgSpan"><img src="images/bottomMsg.png" alt=""></a>
+    <a href="#/cart" class="imgSpan bottomMsg"><img src="images/bottomCar.png" alt=""></a>
+    <input class="detailSubmit" type="button" value="加入购物车">
+</div>
+
+<div id="cartSelect">
+    <h3>请选择</h3>
+    <div cardType="0" goodsPrice="{{hiddenData.manDiscountPrice}}">
+        <p class="selectWrap HCloseBtn">
+            <span class="nan">男</span><span>性：</span><span>￥</span><span ng-bind="data.manDiscountPrice"></span>
+        </p>
+    </div>
+    <div cardType="1" goodsPrice="{{hiddenData.womanDiscountPriceNot}}">
+        <p class="selectWrap HCloseBtn"><span>女性未婚：</span><span>￥</span><span ng-bind="data.womanDiscountPriceNot"></span></p>
+    </div>
+    <div class="nvyi" cardType="2" goodsPrice="{{hiddenData.womanDiscountPriceYet}}">
+        <p class="selectWrap HCloseBtn">
+            <span>女性已婚：</span><span>￥</span><span ng-bind="data.womanDiscountPriceYet"></span>
+        </p>
+    </div>
+</div>
+
+<div class="bottomBlank"></div>
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

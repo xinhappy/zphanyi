@@ -1,0 +1,69 @@
+<div class="userInfoWrap">
+    <div class="userHeader">
+        <a href="#/exit" class="setClass"><img src="images/set.png" alt=""></a>
+        <div class="portraitWrap">
+            <!--<div class="portrait"><img ng-src="{{imgIp+userData.userPhotoUrl}}" alt=""></div>-->
+            <a href="#/account" ng-if="accountData.userPhotoUrl != '/uploadFilenull'" class="portrait"><img ng-src="{{imgIp+accountData.userPhotoUrl}}" alt=""></a>
+            <a href="#/account" ng-if="accountData.userPhotoUrl == '/uploadFilenull'" class="portrait"><img src="images/defaultPortrait.jpg" alt=""></a>
+            <!--<a href="#/account" class="portrait"><img src="images/portrait.png" alt=""></a>-->
+            <div class="userNamewrap"> <span class="userName" ng-bind="accountData.nickname"></span><span> ></span></div>
+        </div>
+        <div class="clearBoth"></div>
+        <div class="userFun">
+            <a href="#/waitPay"><img src="images/waitPay.png" alt="">
+                <p>待付款</p>
+            </a>
+            <a ng-click="toSend()"><img src="images/unDeliver.png" alt="">
+                <p>待发货</p>
+            </a>
+            <a href="#/waitDeliver"><img src="images/unReceive.png" alt="">
+                <p>待收货</p>
+            </a>
+            <a ng-click="appraise()"><img src="images/unComment.png" alt="">
+                <p>待评价</p>
+            </a>
+            <a href="#/allOrder" class="allOrder"><img src="images/allOrder.png" alt="">
+                <p>全部订单</p>
+            </a>
+        </div>
+    </div>
+    <div class="clearBoth"></div>
+    <div class="mainFun">
+        <a href="#/myAppoint"><img src="images/myOrder.png" alt="">
+            <p>我的预约</p>
+        </a>
+        <a onclick="easemobIM()"><img src="images/zaixian.png" alt="">
+            <p>在线咨询</p>
+        </a>
+        <a href="#/membersControl"><img src="images/renyuan.png" alt="">
+            <p>成员管理</p>
+        </a>
+        <a ng-click="queryReport()"><img src="images/tijian.png" alt="">
+            <p>体检报告</p>
+        </a>
+        <a ng-click="healthProject()"><img src="images/jiankang.png" alt="">
+            <p>健康管理方案</p>
+        </a>
+        <!--<a><img src="images/help.png" alt="">-->
+            <!--<p>帮助</p>-->
+        <!--</a>-->
+        <a href="#/report/index"><img src="images/jiedu.png" alt="">
+            <p>报告解读</p>
+        </a>
+    </div>
+
+    <div class="bottomBlank"></div>
+    <div class="footerNav">
+
+        <a href="#/home" class="backIcon">
+
+        </a>
+        <a href="#/home" class="homeIcon">
+
+        </a>
+        <a onclick="easemobIM()" class="userIcon">
+
+        </a>
+    </div>
+    <div class="clearBoth"></div>
+</div>

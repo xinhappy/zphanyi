@@ -7554,7 +7554,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 }
                 if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
                     myService.setObject('imgRepData', $scope.imgRepData)
-                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                    window.open(ip + $scope.imgRepData.rows[0].fileUrl)
                 } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
                     myService.setObject('imgRepData', $scope.imgRepData)
                     $state.go('imgShow')
@@ -7585,7 +7585,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 }
                 if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
                     myService.setObject('imgRepData', $scope.imgRepData)
-                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                    window.open(ip + $scope.imgRepData.rows[0].fileUrl)
                 } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
                     myService.setObject('imgRepData', $scope.imgRepData)
                     $state.go('imgShow')
@@ -7616,7 +7616,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 }
                 if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
                     myService.setObject('imgRepData', $scope.imgRepData)
-                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                    window.open(ip + $scope.imgRepData.rows[0].fileUrl)
                 } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
                     myService.setObject('imgRepData', $scope.imgRepData)
                     $state.go('imgShow')
@@ -7647,7 +7647,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 }
                 if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
                     myService.setObject('imgRepData', $scope.imgRepData)
-                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                    window.open(ip + $scope.imgRepData.rows[0].fileUrl)
                 } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
                     myService.setObject('imgRepData', $scope.imgRepData)
                     $state.go('imgShow')
@@ -7679,7 +7679,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 }
                 if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
                     myService.setObject('imgRepData', $scope.imgRepData)
-                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                    window.open(ip + $scope.imgRepData.rows[0].fileUrl)
                 } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
                     myService.setObject('imgRepData', $scope.imgRepData)
                     $state.go('imgShow')
@@ -7715,7 +7715,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
                     console.log(111)
                     myService.setObject('imgRepData', $scope.imgRepData)
-                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                    window.open(ip + $scope.imgRepData.rows[0].fileUrl)
                 } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
                     myService.setObject('imgRepData', $scope.imgRepData)
                     $state.go('imgShow')
@@ -7747,7 +7747,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 }
                 if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
                     myService.setObject('imgRepData', $scope.imgRepData)
-                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                    window.open(ip + $scope.imgRepData.rows[0].fileUrl)
                 } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
                     myService.setObject('imgRepData', $scope.imgRepData)
                     $state.go('imgShow')
@@ -7779,7 +7779,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 }
                 if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
                     myService.setObject('imgRepData', $scope.imgRepData)
-                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                    window.open(ip + $scope.imgRepData.rows[0].fileUrl)
                 } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
                     myService.setObject('imgRepData', $scope.imgRepData)
                     $state.go('imgShow')

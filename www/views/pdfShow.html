@@ -1,1 +1,30 @@
-pdf
+<style>
+    .my-gallery{
+        text-align: center;
+    }
+</style>
+<div style="background-color: #ffffff;" class="mallHeader mallHeaderStatic">
+    <!--<a href="" class="menu"><img src="images/menu.png" alt=""></a>-->
+    <span>健康管理报告</span>
+</div>
+<div class="my-gallery">
+    <figure ng-repeat="item in pdfData.rows">
+        <a style="color: #666" ng-href="{{imgIp+item.fileUrl}}" ng-bind="item.fileName"></a>
+    </figure>
+</div>
+
+
+
+<div class="footerNav">
+
+    <a ng-click="goback()" class="backIcon">
+
+    </a>
+    <a href="#/home" class="homeIcon">
+
+    </a>
+    <a id="easemob" class="userIcon">
+
+    </a>
+</div>
+<div class="clearBoth"></div>

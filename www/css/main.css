@@ -2966,19 +2966,19 @@ input[type="submit"], input {
 
 .healthProject {
 	text-align: center;
+	background: #fff;
 }
 
 .healthProject a {
 	background-color: #ffffff;
 	float: left;
 	display: inline-block;
-	width: 49.3vw;
-	height: 40vh;
+	width: 24.5vw;
 	/*border: 1px solid #B0B0B0;*/
 }
 
 .healthProject a img {
-	margin-top: 15vw;
+	margin-top: 2vw;
 	width: 30vw;
 }
 

@@ -3,10 +3,10 @@
  */
 // var ip='http://http://192.168.24.194:3500/';//life
 //var ip = 'http://182.92.184.13:8080';//alicloud
- var ip = '';//alicloud 打包
+//  var ip = '';//alicloud 打包
 // var ip = 'http://192.168.27 .219:8080';//xiaolei
 // var ip = 'http://192.168.27.229:8080';//haiyue
-// var ip = 'http://192.168.27.216:8080';//zhiyong
+var ip = 'http://192.168.27.216:8080';//zhiyong
 // var ip = 'http://192.168.27.203:8088';//zhiyong
 var routeApp = angular.module('mainApp', ['ui.router', 'ngSanitize', 'ngCookies']);
 routeApp.run(function ($rootScope, $state) {

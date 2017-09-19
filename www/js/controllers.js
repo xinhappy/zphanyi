@@ -7446,7 +7446,9 @@ routeApp.directive('healthProject', function ($timeout, $rootScope, $http, mySer
                     console.log($(this).html())
                     $('.selectHealthDateSpan').html($(this).html())
                     myService.set('queryDateTime', $(this).attr('checknum'))
+                    myService.set('inspectNum', $(this).attr('inspectNum'))
                     var queryDateTime = myService.get('queryDateTime')
+                    var inspectNum = myService.get('inspectNum')
                     console.log(queryDateTime)
                     $('.allMask').hide()
                     $('.selectHealthDate').hide()
@@ -7481,6 +7483,52 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
             $scope.queryDate[i].checkTime = $scope.queryDate[i].checkTime.substr(0, 10)
         }
 
+        var queryDateTime = myService.get('queryDateTime')
+
+        if (queryDateTime == undefined) {
+            var createTime = $scope.queryDate[0].checkTime + ' ' + '00:00:00'
+        }
+        if (queryDateTime != undefined) {
+            var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
+        }
+
+        var inspectNum = myService.get('inspectNum')
+        if(inspectNum==undefined){
+            $http.get(ip + '/appSetMeal/queryHealthPlan.htm?&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone+'&dateString='+createTime+'&checkNum='+inspectNum).success(function(res){
+                var resultData = res.resultData.split(",");
+                var resultDesc = JSON.parse(res.resultDesc);
+                resultData.forEach(function (item) {
+                    var s = "p"+ item;
+                    $scope[s] = true;
+                    if(item === "5011"){
+                        $scope.shengli = resultDesc.item
+                    }
+                    if(item === "5032"){
+                        $scope.tili = resultDesc.item
+                    }
+
+                });
+            })
+        }else{
+            $http.get(ip + '/appSetMeal/queryHealthPlan.htm?&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone+'&dateString='+createTime+'&checkNum='+inspectNum).success(function(res){
+                var resultData = res.resultData.split(",");
+                var resultDesc = JSON.parse(res.resultDesc);
+                resultData.forEach(function (item) {
+                    var s = "p"+ item;
+                    $scope[s] = true;
+                    if(item === "5011"){
+                        $scope.shengli = resultDesc.item
+                    }
+                    if(item === "5032"){
+                        $scope.tili = resultDesc.item
+                    }
+
+                });
+            })
+        }
+
+
+
         $scope.projectOne = function () {
             var queryDateTime = myService.get('queryDateTime')
             console.log(queryDateTime)
@@ -7491,7 +7539,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
                 var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
             }
             console.log(createTime)
-            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5011' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&checkTime=' + createTime).success(function (data) {
+            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5022' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&cTime=' + createTime).success(function (data) {
                 console.log(data)
                 $scope.imgRepData = data
                 console.log($scope.imgRepData)
@@ -7522,7 +7570,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
             if (queryDateTime != undefined) {
                 var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
             }
-            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5012' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&checkTime=' + createTime).success(function (data) {
+            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5011' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&cTime=' + createTime).success(function (data) {
                 console.log(data)
                 $scope.imgRepData = data
                 console.log($scope.imgRepData)
@@ -7553,7 +7601,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
             if (queryDateTime != undefined) {
                 var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
             }
-            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5021' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&checkTime=' + createTime).success(function (data) {
+            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5012' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&cTime=' + createTime).success(function (data) {
                 console.log(data)
                 $scope.imgRepData = data
                 console.log($scope.imgRepData)
@@ -7584,7 +7632,139 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
             if (queryDateTime != undefined) {
                 var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
             }
-            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5022' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&checkTime=' + createTime).success(function (data) {
+            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5021' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&cTime=' + createTime).success(function (data) {
+                console.log(data)
+                $scope.imgRepData = data
+                console.log($scope.imgRepData)
+                if (data.rows.length < 1) {
+                    $('#simple-dialogBox').dialogBox({
+                        hasMask: true,
+                        autoHide: true,
+                        time: 800,
+                        content: '暂无数据'
+                    })
+                    return false
+                }
+                if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
+                    myService.setObject('imgRepData', $scope.imgRepData)
+                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
+                    myService.setObject('imgRepData', $scope.imgRepData)
+                    $state.go('imgShow')
+                }
+            })
+        }
+
+        $scope.projectFive = function () {
+            var queryDateTime = myService.get('queryDateTime')
+            console.log(queryDateTime)
+            if (queryDateTime == undefined) {
+                var createTime = $scope.queryDate[0].checkTime + ' ' + '00:00:00'
+            }
+            if (queryDateTime != undefined) {
+                var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
+            }
+            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5042' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&cTime=' + createTime).success(function (data) {
+                console.log(data)
+                $scope.imgRepData = data
+                console.log($scope.imgRepData)
+                if (data.rows.length < 1) {
+                    $('#simple-dialogBox').dialogBox({
+                        hasMask: true,
+                        autoHide: true,
+                        time: 800,
+                        content: '暂无数据'
+                    })
+                    return false
+                }
+                if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
+                    myService.setObject('imgRepData', $scope.imgRepData)
+                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
+                    myService.setObject('imgRepData', $scope.imgRepData)
+                    $state.go('imgShow')
+                }
+            })
+        }
+
+
+
+
+        $scope.projectSeven = function () {
+            var queryDateTime = myService.get('queryDateTime')
+            console.log(queryDateTime)
+            if (queryDateTime == undefined) {
+                var createTime = $scope.queryDate[0].checkTime + ' ' + '00:00:00'
+            }
+            if (queryDateTime != undefined) {
+                var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
+            }
+            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5031' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&cTime=' + createTime).success(function (data) {
+                console.log(data)
+                $scope.imgRepData = data
+                console.log($scope.imgRepData)
+                if (data.rows.length < 1) {
+                    $('#simple-dialogBox').dialogBox({
+                        hasMask: true,
+                        autoHide: true,
+                        time: 800,
+                        content: '暂无数据'
+                    })
+                    return false
+                }
+                if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
+                    console.log(111)
+                    myService.setObject('imgRepData', $scope.imgRepData)
+                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
+                    myService.setObject('imgRepData', $scope.imgRepData)
+                    $state.go('imgShow')
+                }
+            })
+        }
+
+        $scope.projectEight = function () {
+            var queryDateTime = myService.get('queryDateTime')
+            console.log(queryDateTime)
+            if (queryDateTime == undefined) {
+                var createTime = $scope.queryDate[0].checkTime + ' ' + '00:00:00'
+            }
+            if (queryDateTime != undefined) {
+                var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
+            }
+            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5041' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&cTime=' + createTime).success(function (data) {
+                console.log(data)
+                $scope.imgRepData = data
+                console.log($scope.imgRepData)
+                if (data.rows.length < 1) {
+                    $('#simple-dialogBox').dialogBox({
+                        hasMask: true,
+                        autoHide: true,
+                        time: 800,
+                        content: '暂无数据'
+                    })
+                    return false
+                }
+                if ($scope.imgRepData.rows[0].fileType == 'pdf' || $scope.imgRepData.rows[0].fileType == 'docx' || $scope.imgRepData.rows[0].fileType == 'DOCX' || $scope.imgRepData.rows[0].fileType == 'PDF' || $scope.imgRepData.rows[0].fileType == 'XPS' || $scope.imgRepData.rows[0].fileType == 'xps') {
+                    myService.setObject('imgRepData', $scope.imgRepData)
+                    window.location.href = ip + $scope.imgRepData.rows[0].fileUrl
+                } else if ($scope.imgRepData.rows[0].fileType == 'png' || $scope.imgRepData.rows[0].fileType == 'PNG' || $scope.imgRepData.rows[0].fileType == 'jpg' || $scope.imgRepData.rows[0].fileType == 'JPG' || $scope.imgRepData.rows[0].fileType == 'jpeg' || $scope.imgRepData.rows[0].fileType == 'JPEG') {
+                    myService.setObject('imgRepData', $scope.imgRepData)
+                    $state.go('imgShow')
+                }
+            })
+        }
+
+        $scope.projectNine = function () {
+            var queryDateTime = myService.get('queryDateTime')
+            console.log(queryDateTime)
+            if (queryDateTime == undefined) {
+                var createTime = $scope.queryDate[0].checkTime + ' ' + '00:00:00'
+            }
+            if (queryDateTime != undefined) {
+                var createTime = myService.get('queryDateTime') + ' ' + '00:00:00'
+            }
+            $http.get(ip + '/appSetMeal/queryMyManagePlan.htm?userId=' + $scope.favoriteCookie.id + '&manageType=5033' + '&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone + '&cTime=' + createTime).success(function (data) {
                 console.log(data)
                 $scope.imgRepData = data
                 console.log($scope.imgRepData)

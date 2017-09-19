@@ -7494,6 +7494,7 @@ routeApp.controller('healthProjectCtrl', function ($scope, $state, $rootScope, $
 
         var inspectNum = myService.get('inspectNum')
         if(inspectNum==undefined){
+            inspectNum = $scope.queryDate[0].inspectNum;
             $http.get(ip + '/appSetMeal/queryHealthPlan.htm?&userCard=' + $scope.favoriteCookie.userCard + '&telephone=' + $scope.favoriteCookie.telephone+'&dateString='+createTime+'&checkNum='+inspectNum).success(function(res){
                 var resultData = res.resultData.split(",");
                 var resultDesc = JSON.parse(res.resultDesc);
